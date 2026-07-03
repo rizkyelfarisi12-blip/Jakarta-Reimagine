@@ -84,66 +84,44 @@
     </section>
 
     <!-- Categories Section -->
-     <section class="categories">
-
+    <section class="categories">
     <div class="category-overlay"></div>
-
     <div class="container">
-
         <h2 class="section-title">
             CATEGORIES
         </h2>
-
         <div class="category-wrapper">
-
             <div class="category-left"></div>
-
             <div class="category-right">
-
                 <div class="category-item">
-
                     <div class="category-icon">✦</div>
-
                     <h3>MAHASISWA &<br>FRESH GRADUATE</h3>
-
                     <p>
                         Memberikan ruang bagi talenta muda dalam menuangkan
                         gagasan inovatif mengenai pengembangan ruang publik
                         dan kawasan perkotaan.
                     </p>
-
                     <a href="#" class="category-btn">
                         Submit
                         <span>→</span>
                     </a>
-
                 </div>
-
                 <div class="category-item">
-
                     <div class="category-icon">✦</div>
-
                     <h3>PROFESSIONAL</h3>
-
                     <p>
                         Memberikan ruang bagi profesional dalam menghadirkan
                         solusi yang tidak hanya kreatif, tetapi juga realistis,
                         aplikatif dan berpotensi.
                     </p>
-
                     <a href="#" class="category-btn">
                         Submit
                         <span>→</span>
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
     <!-- Timeline Section -->
@@ -177,6 +155,74 @@
             <div class="scroll-hint">← Scroll untuk melihat lebih banyak →</div>
         </div>
     </section>
+
+
+<section class="timeline-section">
+    <div class="timeline-sticky">
+
+        <div class="timeline-header">
+            <h2>LINIMASA</h2>
+            <p>Scroll untuk mengikuti perjalanan kompetisi</p>
+        </div>
+
+        <div class="timeline-line"></div>
+
+        <div class="timeline-wrapper">
+
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">X - X JULI 2026</div>
+                        <div class="timeline-title">OPEN SUBMISSION</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">X JULI 2026</div>
+                        <div class="timeline-title">TOP 30 FINALIST ANNOUNCEMENT</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">X JULI 2026</div>
+                        <div class="timeline-title">ONLINE PRESENTATION</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">X JULI 2026</div>
+                        <div class="timeline-title">TOP 15 FINALIST ANNOUNCEMENT</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-card">
+                <div class="timeline-card-inner">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">X - X JULI 2026</div>
+                        <div class="timeline-title">FINAL PRESENTATION SUBMISSI</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
     <!-- Jury Section -->
     <section class="jury">
@@ -258,46 +304,58 @@
 
     <script>
         const observer = new IntersectionObserver((entries)=>{
-
             entries.forEach(entry=>{
-
                 if(entry.isIntersecting){
-
                     entry.target.classList.add("show");
-
                 }
-
             });
-
         },{
             threshold:.3
         });
 
         document.querySelectorAll(".glass-card-wrapper").forEach((el)=>{
-
             observer.observe(el);
-
         });
 
         const slides = document.querySelectorAll(".bg-slide");
-
         let currentSlide = 0;
-
         setInterval(()=>{
-
             slides[currentSlide].classList.remove("active");
-
             currentSlide++;
-
             if(currentSlide >= slides.length){
-
                 currentSlide = 0;
-
             }
-
             slides[currentSlide].classList.add("active");
-
         },5000);
+
+
+        // timeline script temp
+        const timelineSection=document.querySelector(".timeline-section");
+        const timeline=document.querySelector(".timeline-wrapper");
+        window.addEventListener("scroll",()=>{
+            const rect=timelineSection.getBoundingClientRect();
+            const maxScroll=timelineSection.offsetHeight-window.innerHeight;
+            const progress=Math.min(
+                Math.max(-rect.top/maxScroll,0),
+                1
+            );
+            const maxMove=timeline.scrollWidth-window.innerWidth+120;
+            timeline.style.transform=`translateX(-${progress*maxMove}px)`;
+        });
+
+        const observerTime=new IntersectionObserver(entries=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+                timeline.classList.add("show");
+                }
+            });
+        });
+        observerTime.observe(timelineSection);
+
+        
+
     </script>
 </body>
 </html>
