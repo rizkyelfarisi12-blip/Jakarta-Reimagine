@@ -15,11 +15,16 @@ window.addEventListener("scroll", () => {
 
 });
 
+const navButtons = document.querySelectorAll(".nav-btn");
 
-// Navigation button click handlers
-navButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        navButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+navButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        navButtons.forEach(btn=>btn.classList.remove("active"));
+
+        button.classList.add("active");
+
     });
+
 });

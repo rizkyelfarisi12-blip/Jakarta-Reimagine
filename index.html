@@ -11,7 +11,61 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
 </head>
+
 <body>
+
+    <!-- <div id="overlay" class="overlay">
+        <div id="modal" class="modal-window">
+            <button id="closeModal" class="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalBody"></div>
+        </div>
+    </div> -->
+
+    <div id="juryModal" class="modal">
+        <div class="jury-popup">
+            <button class="modal-close">&times;</button>
+            <img id="juryImage">
+            <h2 id="juryName"></h2>
+            <h4 id="juryPosition"></h4>
+            <p id="juryDescription"></p>
+            <h3>Riwayat</h3>
+            <ul id="juryHistory"></ul>
+        </div>
+    </div>
+
+    <div id="newsModal" class="modal">
+        <div class="news-popup">
+            <button class="modal-close">&times;</button>
+            <h2>📢 Pendaftaran Telah Dibuka</h2>
+            <p>
+                Jakarta Reimagined Placemaking Design Competition
+                resmi dibuka.
+            </p>
+            <p>
+                Segera kirimkan karya terbaikmu sebelum batas waktu
+                pengumpulan berakhir.
+            </p>
+            <button id="closeNews" class="btn btn-primary">
+                Mulai Jelajahi
+            </button>
+        </div>
+    </div>
+        
+<!-- <div class="jury-popup">
+    <div class="jury-left">
+        <img>
+    </div>
+    <div class="jury-right">
+        <h2>
+        <h4>
+        <p>
+        <ul>
+    </div>
+</div> -->
+
+
     <!-- Header/Navigation -->
     <header id="header">
         <div class="container">
@@ -37,7 +91,7 @@
                     <p>Bergabunglah dalam kompetisi desain terbesar untuk menciptakan ruang publik yang lebih baik di Jakarta.</p>
                     <div class="hero-btn">
                         <button class="btn btn-primary">
-                            Daftar <span class="arrow">→</span>
+                            Submit <span class="arrow">→</span>
                         </button>
                     </div>
                 </div>
@@ -56,16 +110,19 @@
         <div class="bg-slider">
 
             <div class="bg-slide active"
-                style="background-image:url('assets/icon/bg-grey-building.png');"></div>
+                style="background-image:url('assets/gallery/bg-sec2-1.jpg');"></div>
 
             <div class="bg-slide"
-                style="background-image:url('assets/icon/bg-blue.png');"></div>
+                style="background-image:url('assets/gallery/bg-sec2-2.jpg');"></div>
 
             <div class="bg-slide"
-                style="background-image:url('assets/icon/bg-orange.png');"></div>
+                style="background-image:url('assets/gallery/bg-sec2-3.jpg');"></div>
 
             <div class="bg-slide"
-                style="background-image:url('assets/icon/icon-jkt-reimagine.png');"></div>
+                style="background-image:url('assets/gallery/bg-sec2-4.jpg');"></div>
+
+            <div class="bg-slide"
+                style="background-image:url('assets/gallery/bg-sec2-5.jpg');"></div>
 
         </div>
 
@@ -93,39 +150,54 @@
         <div class="category-wrapper">
             <div class="category-left"></div>
             <div class="category-right">
+
                 <div class="category-item">
-                    <div class="category-icon">✦</div>
-                    <h3>MAHASISWA &<br>FRESH GRADUATE</h3>
+
+                    <div class="category-title">
+                        <img src="assets/icon/icon-category.png" class="category-icon" alt="">
+                        <h3>MAHASISWA &<br>FRESH GRADUATE</h3>
+                    </div>
+
                     <p>
                         Memberikan ruang bagi talenta muda dalam menuangkan
                         gagasan inovatif mengenai pengembangan ruang publik
                         dan kawasan perkotaan.
                     </p>
+
                     <a href="#" class="category-btn">
                         Submit
                         <span>→</span>
                     </a>
+
                 </div>
+
                 <div class="category-item">
-                    <div class="category-icon">✦</div>
-                    <h3>PROFESSIONAL</h3>
+
+                    <div class="category-title">
+                        <img src="assets/icon/icon-category.png" class="category-icon" alt="">
+                        <h3>PROFESSIONAL</h3>
+                    </div>
+
                     <p>
                         Memberikan ruang bagi profesional dalam menghadirkan
                         solusi yang tidak hanya kreatif, tetapi juga realistis,
                         aplikatif dan berpotensi.
                     </p>
+
                     <a href="#" class="category-btn">
                         Submit
                         <span>→</span>
                     </a>
+
                 </div>
+
             </div>
         </div>
     </div>
 </section>
 
     <!-- Timeline Section -->
-    <section class="timeline">
+    <!-- <section class="timeline">
         <div class="container">
             <h2>LINIMASA</h2>
             <div class="timeline-scroll">
@@ -154,10 +226,11 @@
             </div>
             <div class="scroll-hint">← Scroll untuk melihat lebih banyak →</div>
         </div>
-    </section>
+    </section> -->
 
 
 <section class="timeline-section">
+    <div class="timeline-bg"></div>
     <div class="timeline-sticky">
 
         <div class="timeline-header">
@@ -225,41 +298,13 @@
 </section>
 
     <!-- Jury Section -->
-    <section class="jury">
-        <div class="container">
-            <h2>JURI</h2>
-            <div class="jury-scroll">
-                <div class="jury-items">
-                    <div class="jury-item">
-                        <div class="jury-photo">👤</div>
-                        <div class="jury-name">JAKA GATOT SURA</div>
-                        <div class="jury-role">CO-FOUNDER MBLOC</div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-photo">👤</div>
-                        <div class="jury-name">NIRWONO JOGA</div>
-                        <div class="jury-role">ARSITEK PERANCANG KOTA</div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-photo">👤</div>
-                        <div class="jury-name">ROBY DWI CAHYUDI</div>
-                        <div class="jury-role">CHAIRMAN KOMITE TATA KOTA</div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-photo">👤</div>
-                        <div class="jury-name">DICKY SETIAWAN</div>
-                        <div class="jury-role">GUBERNUR JAKARTA</div>
-                    </div>
-                    <div class="jury-item">
-                        <div class="jury-photo">👤</div>
-                        <div class="jury-name">OKA NANDA NURUDE</div>
-                        <div class="jury-role">LOREM IPSUM</div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-hint">← Scroll untuk melihat lebih banyak →</div>
+     <section class="jury">
+        <div class="jury-grid"></div>
+        <div class="jury-scroll-hint">
+            ← Geser untuk melihat semua juri →
         </div>
     </section>
+    
 
     <!-- Footer -->
     <footer>
@@ -303,6 +348,133 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+    fetch("assets/data/juries.json")
+    .then(response => response.json())
+    .then(data => {
+        const container = document.querySelector(".jury-grid");
+        data.juries.forEach(jury => {
+            container.innerHTML += `
+            <div class="jury-card" data-id="${jury.id}">
+                <img src="${jury.photo}" alt="${jury.name}">
+                <h3>${jury.name}</h3>
+                <p>${jury.position}</p>
+            </div>
+            `;
+        });
+    });
+
+    let juriesData=[];
+
+    fetch("assets/data/juries.json")
+    .then(res=>res.json())
+    .then(data=>{
+
+        juriesData=data.juries;
+
+    });
+
+    document.addEventListener("click",function(e){
+
+        const card=e.target.closest(".jury-card");
+        if(!card) return;
+        const id=Number(card.dataset.id);
+        const jury=juriesData.find(item=>item.id===id);
+        if(jury){
+
+            openPopup(jury);
+
+        }
+    });
+
+function openPopup(jury){
+    document.getElementById("juryImage").src = jury.photo;
+    document.getElementById("juryName").textContent = jury.name;
+    document.getElementById("juryPosition").textContent = jury.position;
+    typeDescription(jury.description);
+    const list = document.getElementById("juryHistory");
+    list.innerHTML = "";
+    jury.history.forEach((item,index)=>{
+        setTimeout(()=>{
+            list.innerHTML += `<li>${item}</li>`;
+        },index*200);
+    });
+    document.getElementById("juryModal").classList.add("show");
+}
+
+    function typeDescription(text){
+    let i = 0;
+    const target = document.getElementById("juryDescription");
+    target.innerHTML = "";
+    function typing(){
+        if(i < text.length){
+            target.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing,20);
+        }
+    }
+    typing();
+}
+
+document.querySelectorAll(".modal-close").forEach(btn=>{
+    btn.onclick=()=>{
+        btn.closest(".modal").classList.remove("show");
+    }
+});
+
+document.querySelectorAll(".modal").forEach(modal=>{
+    modal.addEventListener("click",(e)=>{
+        if(e.target===modal){
+            modal.classList.remove("show");
+        }
+    });
+});
+
+document.getElementById("closeNews").onclick=function(){
+
+    document
+    .getElementById("newsModal")
+    .classList.remove("show");
+
+}
+
+// const overlay=document.getElementById("overlay");
+// const modal=document.getElementById("modalBody");
+
+// function openModal(html){
+//     modal.innerHTML=html;
+//     overlay.classList.add("show");
+//     document.body.style.overflow="hidden";
+// }
+
+// function closeModal(){
+//     overlay.classList.remove("show");
+//     document.body.style.overflow="";
+// }
+
+// document.getElementById("closeModal")
+// .onclick=closeModal;
+// overlay.onclick=(e)=>{
+//     if(e.target===overlay){
+//         closeModal();
+//     }
+// }
+
+// document.addEventListener("keydown",e=>{
+//     if(e.key==="Escape"){
+//         closeModal();
+//     }
+// });
+
+        const closeNews=document.getElementById("closeNews");
+        if(closeNews){
+            closeNews.onclick=function(){
+                document
+                .getElementById("newsModal")
+                .classList.remove("show");
+            }
+        }
+
+
         const observer = new IntersectionObserver((entries)=>{
             entries.forEach(entry=>{
                 if(entry.isIntersecting){
@@ -344,17 +516,22 @@
         });
 
         const observerTime=new IntersectionObserver(entries=>{
+                entries.forEach(entry=>{
+                    if(entry.isIntersecting){
+                        timeline.classList.add("show");
+                        }
+                    });
+                });
 
-        entries.forEach(entry=>{
-
-            if(entry.isIntersecting){
-                timeline.classList.add("show");
-                }
-            });
-        });
-        observerTime.observe(timelineSection);
-
-        
+                observerTime.observe(timelineSection);
+                window.addEventListener("load",()=>{
+                    console.log("LOAD BERHASIL");
+                    setTimeout(()=>{
+                        console.log("POPUP");
+                        document.getElementById("newsModal")
+                            .classList.add("show");
+                    },800);
+                });
 
     </script>
 </body>
