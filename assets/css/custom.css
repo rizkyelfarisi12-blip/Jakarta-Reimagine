@@ -9,7 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 :root {
     --font-display: 'Archivo', sans-serif;
     --font-body: 'Archivo', sans-serif;
@@ -788,9 +787,9 @@ to{
 
 }
 
-.category-item:hover{
+/* .category-item:hover{
     transform:translateY(-8px);
-}
+} */
 
 .category-title{
     display:flex;
@@ -825,20 +824,18 @@ to{
     transition:.35s;
 }
 
-.category-item h3{
+/* .category-item h3{
 
     margin:15px 0;
 
     min-height:50px;
     transition:.35s;
-
-
 }
 .category-item:hover h3{
 
     color:#C1202F;
 
-}
+} */
 
 /* .category-item h4{
     color:#F5A623;
@@ -868,8 +865,8 @@ to{
     gap:12px;
     padding:2px 34px;
     border-radius:20px;
-    border:2px solid rgba(255,255,255,.45);
-    color:white;
+    border:2px solid black;
+    color:black;
     text-decoration:none;
     overflow:hidden;
     transition:
@@ -878,7 +875,12 @@ to{
         box-shadow .35s;
 }
 
-.category-btn::before{
+.category-btn:hover{
+    color: white;
+    background-color: #111;
+}
+
+/* .category-btn::before{
     content:"";
     position:absolute;
     left:0;
@@ -921,17 +923,18 @@ to{
 .category-btn:hover::after{
     left:170%;
     transition:.8s;
-}
+} */
 
 .category-btn span{
     padding-top: 18px;
     align-items:center;
     transition:.35s;
-    color:white;
+    color:black;
 }
 
 .category-btn:hover span{
     transform:translateX(8px);
+    color: white;
 }
 
 .category-item.show{
@@ -1260,134 +1263,78 @@ left:120%;
     }
 }
 .jury{
-
     padding:120px 7%;
-
     background:url("../icon/bg-grey.png") center/cover;
-
 }
 
 .jury-grid{
-
     display:flex;
     gap:24px;
-
     overflow-x:auto;
     overflow-y:hidden;
-
     scroll-behavior:smooth;
-
     padding:20px 0 30px;
-
     scrollbar-width:none;
-
 }
 
 .jury-grid::-webkit-scrollbar{
     display:none;
 }
 .jury-card{
-
     flex:0 0 210px;
-
     background:#fff;
-
     border-radius:22px;
-
     overflow:hidden;
-
     cursor:pointer;
-
     transition:.35s;
-
     box-shadow:0 8px 24px rgba(0,0,0,.08);
-
     position:relative;
-
     transition:.35s;
-
 }
 /* .jury-card:hover{
-
     transform:translateY(-10px);
-
     box-shadow:0 25px 55px rgba(0,0,0,.15);
-    
     transform:translateY(-8px) scale(1.03);
-
     box-shadow:0 18px 45px rgba(0,0,0,.15);
-
-
 } */
 .jury-card img{
-
     width:100%;
-
     height:240px;
-
     object-fit:cover;
-
     display:block;
-
 }
 .jury-card h3{
-
     font-size:18px;
-
     font-weight:700;
-
     padding:18px 18px 6px;
-
 }
 .jury-card p{
-
     font-size:14px;
-
     color:#777;
-
     padding:0 18px 18px;
-
 }
 
 .jury-grid:hover .jury-card{
-
     opacity:.55;
-
     transform:scale(.95);
-
 }
 .jury-grid:hover .jury-card:hover{
-
     opacity:1;
-
     transform:translateY(-10px) scale(1.05);
-
 }
 .jury-scroll-hint{
-
     color:#888;
-
     font-size:14px;
-
     margin:10px 0 30px;
-
     animation:hintMove 2s ease-in-out infinite;
-
 }
 @keyframes hintMove{
-
     0%,100%{
-
         transform:translateX(0);
-
     }
-
     50%{
-
         transform:translateX(8px);
-
     }
-
 }
 
 
@@ -1431,8 +1378,9 @@ left:120%;
     width:min(980px,90vw);
     max-height:85vh;
     padding:45px;
-    background:#fff;
     border-radius:28px;
+
+    background: url('../icon/bg-grey.png') center/cover;
 }
 
 .jury-left img{
@@ -1551,6 +1499,109 @@ left:120%;
 .jury-info li{
 
     margin-bottom:10px;
+
+}
+
+@media (max-width:992px){
+
+    .jury-popup{
+
+        width:95vw;
+
+        padding:30px;
+
+        gap:25px;
+
+    }
+
+    .jury-left{
+
+        flex:0 0 220px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .jury-popup{
+
+        display:block;
+
+        width:95vw;
+
+        max-height:90vh;
+
+        padding:25px;
+
+        overflow-y:auto;
+
+    }
+
+    .jury-left{
+
+        width:100%;
+
+        margin-bottom:25px;
+
+    }
+
+    .jury-left img{
+
+        width:100%;
+
+        max-width:300px;
+
+        margin:auto;
+
+        display:block;
+
+    }
+
+    .jury-right{
+
+        width:100%;
+
+    }
+
+    .jury-right h2{
+
+        font-size:28px;
+
+        text-align:center;
+
+    }
+
+    .jury-right h4{
+
+        text-align:center;
+
+        margin-bottom:20px;
+
+    }
+
+    .jury-description{
+
+        margin-bottom:20px;
+
+    }
+
+    .modal-close{
+
+        top:15px;
+
+        right:15px;
+
+    }
+
+}
+@media (max-height:700px){
+
+    .jury-popup{
+
+        max-height:85vh;
+
+    }
 
 }
 
