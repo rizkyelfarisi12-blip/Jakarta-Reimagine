@@ -62,19 +62,6 @@
         </div>
     </div>
         
-<!-- <div class="jury-popup">
-    <div class="jury-left">
-        <img>
-    </div>
-    <div class="jury-right">
-        <h2>
-        <h4>
-        <p>
-        <ul>
-    </div>
-</div> -->
-
-
     <!-- Header/Navigation -->
     <header id="header">
         <div class="container">
@@ -83,9 +70,9 @@
                     <img src="assets/icon/icon-jkt-reimagine.png" alt="Logo">
                 </div>
                 <nav>
-                    <button class="nav-btn active" data-tab="about">TENTANG</button>
-                    <button class="nav-btn" data-tab="submit">SUBMISI</button>
-                    <button class="nav-btn" data-tab="jury">JURI</button>
+                    <a href="#tentang"><button class="nav-btn active" data-tab="about">TENTANG</button></a>
+                    <a href="#submisi"><button class="nav-btn" data-tab="submit">SUBMISI</button></a>
+                    <a href="#juri"><button class="nav-btn" data-tab="jury">JURI</button></a>
                 </nav>
             </div>
         </div>
@@ -110,7 +97,7 @@
     </section>
 
     <!-- Main Visual Section -->
-    <section class="main-visual">
+    <section class="main-visual" id="tentang">
         
         <!-- <div class="floating-circle circle1"></div>
         <div class="floating-circle circle2"></div>
@@ -150,7 +137,7 @@
     </section>
 
     <!-- Categories Section -->
-    <section class="categories">
+    <section class="categories" id="submisi">
     <div class="category-overlay"></div>
     <div class="container">
         <h2 class="section-title">
@@ -307,7 +294,7 @@
 </section>
 
     <!-- Jury Section -->
-     <section class="jury">
+     <section class="jury" id="juri">
         <div class="jury-grid"></div>
         <div class="jury-scroll-hint">
             ← Geser untuk melihat semua juri →

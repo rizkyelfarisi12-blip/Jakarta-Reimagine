@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 :root {
     --font-display: 'Archivo', sans-serif;
     --font-body: 'Archivo', sans-serif;
