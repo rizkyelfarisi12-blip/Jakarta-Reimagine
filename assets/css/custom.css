@@ -1137,9 +1137,11 @@ to{
 }
 .timeline-line{
     position:absolute;
-    top:60%;
     left:0;
-    width:100%;
+    right:0;
+
+    top:calc(45% + 15px);
+
     height:4px;
     background:#E5E5E5;
 }
