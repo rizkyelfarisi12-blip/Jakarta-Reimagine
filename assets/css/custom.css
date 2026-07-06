@@ -1419,28 +1419,72 @@ left:120%;
 } */
 
 .jury-popup{
-
-    width:min(950px,92vw);
-
-    max-height:88vh;
-
-    overflow:auto;
-
-    background:white;
-
-    border-radius:30px;
-
+    position:relative;
     display:grid;
-
     grid-template-columns:320px 1fr;
-
     gap:40px;
+    width:min(980px,90vw);
+    max-height:85vh;
+    padding:45px;
+    background:#fff;
+    border-radius:28px;
+}
 
-    padding:40px;
+.jury-left img{
 
-    transform:translateY(40px);
+    width:100%;
+    height:480px;
 
-    transition:.4s;
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+.jury-right{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.jury-right h2{
+
+    margin-bottom:8px;
+
+    font-size:40px;
+
+}
+
+.jury-right h4{
+
+    margin-bottom:25px;
+
+    color:#888;
+
+}
+.jury-description{
+
+    margin-bottom:30px;
+
+    line-height:1.8;
+
+}
+.jury-history{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding-right:10px;
+
+}
+.jury-history ul{
+
+    padding-left:20px;
+
+    line-height:1.8;
+
 }
 
 .modal.show .jury-popup{

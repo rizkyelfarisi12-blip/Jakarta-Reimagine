@@ -14,26 +14,35 @@
 
 <body>
 
-    <!-- <div id="overlay" class="overlay">
-        <div id="modal" class="modal-window">
-            <button id="closeModal" class="modal-close">
-                <i class="fas fa-times"></i>
-            </button>
-            <div id="modalBody"></div>
-        </div>
-    </div> -->
-
     <div id="juryModal" class="modal">
-        <div class="jury-popup">
-            <button class="modal-close">&times;</button>
+
+    <div class="jury-popup">
+
+        <div class="jury-left">
             <img id="juryImage">
+        </div>
+
+        <div class="jury-right">
+
             <h2 id="juryName"></h2>
             <h4 id="juryPosition"></h4>
-            <p id="juryDescription"></p>
-            <h3>Riwayat</h3>
-            <ul id="juryHistory"></ul>
+
+            <div class="jury-description">
+                <p id="juryDescription"></p>
+            </div>
+
+            <div class="jury-history">
+                <h3>Riwayat</h3>
+                <ul id="juryHistory"></ul>
+            </div>
+
         </div>
+
+        <button class="modal-close">&times;</button>
+
     </div>
+
+</div>
 
     <div id="newsModal" class="modal">
         <div class="news-popup">
@@ -436,34 +445,6 @@ document.getElementById("closeNews").onclick=function(){
     .classList.remove("show");
 
 }
-
-// const overlay=document.getElementById("overlay");
-// const modal=document.getElementById("modalBody");
-
-// function openModal(html){
-//     modal.innerHTML=html;
-//     overlay.classList.add("show");
-//     document.body.style.overflow="hidden";
-// }
-
-// function closeModal(){
-//     overlay.classList.remove("show");
-//     document.body.style.overflow="";
-// }
-
-// document.getElementById("closeModal")
-// .onclick=closeModal;
-// overlay.onclick=(e)=>{
-//     if(e.target===overlay){
-//         closeModal();
-//     }
-// }
-
-// document.addEventListener("keydown",e=>{
-//     if(e.key==="Escape"){
-//         closeModal();
-//     }
-// });
 
         const closeNews=document.getElementById("closeNews");
         if(closeNews){
