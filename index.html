@@ -116,14 +116,14 @@
 
         <div class="container">
             <div class="main-visual-content">                
-                <div class="glass-card-wrapper">
-                    <div class="glass-glow"></div>
+                <!-- <div class="glass-card-wrapper"> -->
+                    <!-- <div class="glass-glow"></div> -->
                     <div class="glass-card">
                         <h2>Wujudkan Visi Jakarta</h2>
                         <p>Dalam ajang ini, kami mengajakmu mereimajinasi sudut dan ruang Kota Jakarta sebagai titik temu dan tumbuh bersama.</p>
-                        <button class="btn btn-card">Pelajari Lebih Lanjut <span>→</span></button>
+                        <a href="about.html"><button class="btn btn-card">Pelajari Lebih Lanjut <span>→</span></button></a>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </section>
@@ -435,19 +435,19 @@ document.getElementById("closeNews").onclick=function(){
         }
 
 
-        const observer = new IntersectionObserver((entries)=>{
-            entries.forEach(entry=>{
-                if(entry.isIntersecting){
-                    entry.target.classList.add("show");
-                }
-            });
-        },{
-            threshold:.3
-        });
+        // const observer = new IntersectionObserver((entries)=>{
+        //     entries.forEach(entry=>{
+        //         if(entry.isIntersecting){
+        //             entry.target.classList.add("show");
+        //         }
+        //     });
+        // },{
+        //     threshold:.3
+        // });
 
-        document.querySelectorAll(".glass-card-wrapper").forEach((el)=>{
-            observer.observe(el);
-        });
+        // document.querySelectorAll(".glass-card-wrapper").forEach((el)=>{
+        //     observer.observe(el);
+        // });
 
         const slides = document.querySelectorAll(".bg-slide");
         let currentSlide = 0;
@@ -476,22 +476,22 @@ document.getElementById("closeNews").onclick=function(){
         });
 
         const observerTime=new IntersectionObserver(entries=>{
-                entries.forEach(entry=>{
-                    if(entry.isIntersecting){
-                        timeline.classList.add("show");
-                        }
-                    });
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    timeline.classList.add("show");
+                    }
                 });
+            });
 
-                observerTime.observe(timelineSection);
-                window.addEventListener("load",()=>{
-                    console.log("LOAD BERHASIL");
-                    setTimeout(()=>{
-                        console.log("POPUP");
-                        document.getElementById("newsModal")
-                            .classList.add("show");
-                    },800);
-                });
+            observerTime.observe(timelineSection);
+            window.addEventListener("load",()=>{
+                console.log("LOAD BERHASIL");
+                setTimeout(()=>{
+                    console.log("POPUP");
+                    document.getElementById("newsModal")
+                        .classList.add("show");
+                },800);
+            });
 
     </script>
 </body>
