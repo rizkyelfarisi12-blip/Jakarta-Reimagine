@@ -187,9 +187,23 @@
     <!-- Timeline Section -->
     <!-- <section class="timeline">
         <div class="container">
+
+            <div class="timeline-nav">
+
+                <button id="timelinePrev">
+                    ←
+                </button>
+
+                <button id="timelineNext">
+                    →
+                </button>
+
+            </div>
+            
             <h2>LINIMASA</h2>
             <div class="timeline-scroll">
                 <div class="timeline-items">
+
                     <div class="timeline-item">
                         <div class="timeline-date">X - X JULI 2026</div>
                         <div class="timeline-title">OPEN SUBMISSION</div>
@@ -210,20 +224,85 @@
                         <div class="timeline-date">X - X JULI 2026</div>
                         <div class="timeline-title">FINAL PRESENTATION SUBMISSI</div>
                     </div>
+
                 </div>
             </div>
             <div class="scroll-hint">← Scroll untuk melihat lebih banyak →</div>
+
+            <div class="timeline-progress">
+                <div class="timeline-progress-bar"></div>
+            </div>
+
         </div>
     </section> -->
 
+    <section class="timeline">
 
-<section class="timeline-section">
+    <div class="container">
+
+        <h2>LINIMASA</h2>
+
+        <div class="timeline-scroll-wrapper">
+
+            <button class="timeline-arrow left" id="timelinePrev">
+                &#10094;
+            </button>
+
+            <div class="timeline-scroll">
+
+                <div class="timeline-items">
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">X - X JULI 2026</div>
+                        <div class="timeline-title">OPEN SUBMISSION</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">X JULI 2026</div>
+                        <div class="timeline-title">TOP 30 FINALIST ANNOUNCEMENT</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">X JULI 2026</div>
+                        <div class="timeline-title">ONLINE PRESENTATION</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">X JULI 2026</div>
+                        <div class="timeline-title">TOP 15 FINALIST ANNOUNCEMENT</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">X - X JULI 2026</div>
+                        <div class="timeline-title">FINAL PRESENTATION SUBMISSI</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="timeline-arrow right" id="timelineNext">
+                &#10095;
+            </button>
+
+        </div>
+
+        <div class="scroll-hint">
+            ← Scroll untuk melihat lebih banyak →
+        </div>
+
+        <div class="timeline-progress">
+            <div class="timeline-progress-bar"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- <section class="timeline-section">
     <div class="timeline-bg"></div>
     <div class="timeline-sticky">
 
         <div class="timeline-header">
             <h2>LINIMASA</h2>
-            <!-- <p>Scroll untuk mengikuti perjalanan kompetisi</p> -->
+            <p>Scroll untuk mengikuti perjalanan kompetisi</p>
         </div>
 
         <div class="timeline-line"></div>
@@ -283,7 +362,7 @@
         </div>
 
     </div>
-</section>
+</section> -->
 
     <!-- Jury Section -->
     <section class="jury" id="juri">
@@ -425,73 +504,115 @@ document.getElementById("closeNews").onclick=function(){
 
 }
 
-        const closeNews=document.getElementById("closeNews");
-        if(closeNews){
-            closeNews.onclick=function(){
-                document
-                .getElementById("newsModal")
-                .classList.remove("show");
-            }
+    const closeNews=document.getElementById("closeNews");
+    if(closeNews){
+        closeNews.onclick=function(){
+            document
+            .getElementById("newsModal")
+            .classList.remove("show");
         }
+    }
 
 
-        // const observer = new IntersectionObserver((entries)=>{
-        //     entries.forEach(entry=>{
-        //         if(entry.isIntersecting){
-        //             entry.target.classList.add("show");
-        //         }
-        //     });
-        // },{
-        //     threshold:.3
-        // });
+    // const observer = new IntersectionObserver((entries)=>{
+    //     entries.forEach(entry=>{
+    //         if(entry.isIntersecting){
+    //             entry.target.classList.add("show");
+    //         }
+    //     });
+    // },{
+    //     threshold:.3
+    // });
 
-        // document.querySelectorAll(".glass-card-wrapper").forEach((el)=>{
-        //     observer.observe(el);
-        // });
+    // document.querySelectorAll(".glass-card-wrapper").forEach((el)=>{
+    //     observer.observe(el);
+    // });
 
-        const slides = document.querySelectorAll(".bg-slide");
-        let currentSlide = 0;
-        setInterval(()=>{
-            slides[currentSlide].classList.remove("active");
-            currentSlide++;
-            if(currentSlide >= slides.length){
-                currentSlide = 0;
-            }
-            slides[currentSlide].classList.add("active");
-        },5000);
+    const slides = document.querySelectorAll(".bg-slide");
+    let currentSlide = 0;
+    setInterval(()=>{
+        slides[currentSlide].classList.remove("active");
+        currentSlide++;
+        if(currentSlide >= slides.length){
+            currentSlide = 0;
+        }
+        slides[currentSlide].classList.add("active");
+    },5000);
+
+
+    window.addEventListener("load",()=>{
+        console.log("LOAD BERHASIL");
+        setTimeout(()=>{
+            console.log("POPUP");
+            document.getElementById("newsModal")
+                .classList.add("show");
+        },800);
+    });
 
 
         // timeline script temp
-        const timelineSection=document.querySelector(".timeline-section");
-        const timeline=document.querySelector(".timeline-wrapper");
-        window.addEventListener("scroll",()=>{
-            const rect=timelineSection.getBoundingClientRect();
-            const maxScroll=timelineSection.offsetHeight-window.innerHeight;
-            const progress=Math.min(
-                Math.max(-rect.top/maxScroll,0),
-                1
-            );
-            const maxMove=timeline.scrollWidth-window.innerWidth+120;
-            timeline.style.transform=`translateX(-${progress*maxMove}px)`;
+        // const timelineSection=document.querySelector(".timeline-section");
+        // const timeline=document.querySelector(".timeline-wrapper");
+        // window.addEventListener("scroll",()=>{
+        //     const rect=timelineSection.getBoundingClientRect();
+        //     const maxScroll=timelineSection.offsetHeight-window.innerHeight;
+        //     const progress=Math.min(
+        //         Math.max(-rect.top/maxScroll,0),
+        //         1
+        //     );
+        //     const maxMove=timeline.scrollWidth-window.innerWidth+120;
+        //     timeline.style.transform=`translateX(-${progress*maxMove}px)`;
+        // });
+
+        // const observerTime=new IntersectionObserver(entries=>{
+        //     entries.forEach(entry=>{
+        //         if(entry.isIntersecting){
+        //             timeline.classList.add("show");
+        //             }
+        //         });
+        //     });
+        //     observerTime.observe(timelineSection);
+
+
+            
+    // Button Scroll Timeline
+    const timelineScroll = document.querySelector(".timeline-scroll");
+    const btnPrev = document.getElementById("timelinePrev");
+    const btnNext = document.getElementById("timelineNext");
+
+    btnNext.addEventListener("click", () => {
+
+        timelineScroll.scrollBy({
+
+            left: 380,
+            behavior: "smooth"
+
         });
 
-        const observerTime=new IntersectionObserver(entries=>{
-            entries.forEach(entry=>{
-                if(entry.isIntersecting){
-                    timeline.classList.add("show");
-                    }
-                });
-            });
+    });
 
-            observerTime.observe(timelineSection);
-            window.addEventListener("load",()=>{
-                console.log("LOAD BERHASIL");
-                setTimeout(()=>{
-                    console.log("POPUP");
-                    document.getElementById("newsModal")
-                        .classList.add("show");
-                },800);
-            });
+    btnPrev.addEventListener("click", () => {
+
+        timelineScroll.scrollBy({
+
+            left: -380,
+            behavior: "smooth"
+
+        });
+
+    });
+
+    const progressBar = document.querySelector(".timeline-progress-bar");
+
+    timelineScroll.addEventListener("scroll", () => {
+
+        const percentage =
+            timelineScroll.scrollLeft /
+            (timelineScroll.scrollWidth - timelineScroll.clientWidth);
+
+        progressBar.style.width = (percentage * 100) + "%";
+
+    });
 
     </script>
 </body>
