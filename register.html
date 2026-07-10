@@ -10,39 +10,177 @@
     
     <link rel="stylesheet" href="assets/css/custom.css">
 
+    <style>
+            
+    .categories{
+        position:relative;
+        min-height:100vh;
+        padding: 90px 0;
+        display:flex;
+        align-items:center;
+        background:url("assets/icon/bg-orange.png");
+        background-size:cover;
+        background-position:center;
+        overflow:hidden;
+    }
+
+    @media (min-width: 768px) {
+        .categories {
+            padding: 6rem 0;
+        }
+    }
+    .categories h2 {
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: var(--dark-gray);
+        /* margin-top: 10rem; */
+        margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+        .categories h2 {
+            font-size: 2.25rem;
+        }
+    }
+    .categories .container{
+        position:relative;
+        z-index:2;
+    }
+
+    .category-wrapper{
+        display:flex;
+        justify-content:flex-end;
+        align-items:flex-start;
+        min-height:600px;
+    }
+
+    .category-right{
+        width:55%;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:60px;
+    }
+
+    .category-item{
+
+        display:flex;
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        height:100%;
+
+        min-height:350px;
+        transition:.45s;
+
+    }
+
+    .category-title{
+        display:flex;
+        align-items:flex-start;
+        gap:18px;
+        margin-bottom:20px;
+    }
+
+    .category-title h3{
+        margin:0;
+        min-height:auto;
+        line-height:1.3;
+    }
+
+    .category-item p{
+        flex:1;
+        line-height:1.8;
+        margin-top:15px;
+        margin-bottom:30px;
+    }
+
+    .category-item span{
+        color:#F5A623;
+        font-weight:600;
+        display:block;
+        margin-bottom:20px;
+    }
+
+    .category-btn{
+        position:relative;
+        display:inline-flex;
+        align-items:center;
+        gap:12px;
+        padding:2px 34px;
+        border-radius:20px;
+        border:2px solid black;
+        color:black;
+        text-decoration:none;
+        overflow:hidden;
+        animation:floating 3s ease-in-out infinite;
+        transition:
+            transform .35s,
+            border-color .35s,
+            box-shadow .35s;
+    }
+
+    .category-btn:hover{
+        color: white;
+        background-color: #111;
+    }
+
+    .category-btn span{
+        padding-top: 18px;
+        align-items:center;
+        transition:.35s;
+        color:black;
+    }
+
+    .category-btn:hover span{
+        transform:translateX(8px);
+        color: white;
+    }
+
+    .category-item.show{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    @media(max-width:992px){
+        .category-wrapper{
+            justify-content:center;
+        }
+        .category-right{
+            width:100%;
+            grid-template-columns:1fr;
+            gap:50px;
+        }
+    }
+
+
+    </style>
 </head>
 <body>
-    
+    <!-- navbar -->
     <div id="menuOverlay" class="menu-overlay"></div>
-    
         <header id="header">
             <div class="container">
                 <div class="header-content">
-
                     <div class="logo">
                         <a href="index.html">
                             <img src="assets/icon/icon-jkt-reimagine.png" alt="Logo">
                         </a>
                     </div>
-
                     <nav id="navMenu">
                         <a href="about.html">
                             <button class="nav-btn active">TENTANG</button>
                         </a>
-
                         <a href="register.html">
                             <button class="nav-btn">SUBMISI</button>
                         </a>
-
                         <a href="index.html#juri">
                             <button class="nav-btn">JURI</button>
                         </a>
                     </nav>
-
                     <button id="menuToggle" class="menu-toggle">
                         ☰
                     </button>
-
                 </div>
             </div>
         </header>
@@ -70,20 +208,21 @@
                             gagasan inovatif mengenai pengembangan ruang publik
                             dan kawasan perkotaan.
                         </p>
+                        
 
-                        <a href="#" class="category-btn">
+                        <!-- <a href="#" class="category-btn">
                             Submit
                             <span>→</span>
-                        </a>
+                        </a> -->
 
                     </div>
 
-                    <!-- <div class="category-item">
+                    <div class="category-item" style="margin-top: 80px;">
 
-                        <div class="category-title">
+                        <!-- <div class="category-title">
                             <img src="assets/icon/icon-category.png" class="category-icon" alt="">
                             <h3>PROFESSIONAL</h3>
-                        </div>
+                        </div> -->
 
                         <p>
                             Memberikan ruang bagi profesional dalam menghadirkan
@@ -96,7 +235,7 @@
                             <span>→</span>
                         </a>
 
-                    </div> -->
+                    </div>
 
                 </div>
             </div>
