@@ -28,3 +28,44 @@ navButtons.forEach(button=>{
     });
 
 });
+
+const menuToggle=document.getElementById("menuToggle");
+const navMenu=document.getElementById("navMenu");
+const menuOverlay=document.getElementById("menuOverlay");
+
+menuToggle.onclick=()=>{
+
+    navMenu.classList.toggle("active");
+
+    menuOverlay.classList.toggle("active");
+
+    menuToggle.innerHTML=
+        navMenu.classList.contains("active")
+        ?"✕"
+        :"☰";
+
+};
+
+menuOverlay.onclick=()=>{
+
+    navMenu.classList.remove("active");
+
+    menuOverlay.classList.remove("active");
+
+    menuToggle.innerHTML="☰";
+
+};
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+
+    link.onclick=()=>{
+
+        navMenu.classList.remove("active");
+
+        menuOverlay.classList.remove("active");
+
+        menuToggle.innerHTML="☰";
+
+    };
+
+});

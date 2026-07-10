@@ -35,7 +35,7 @@
             <button class="modal-close">&times;</button>
         </div>
     </div>
-
+<!-- 
     <div id="newsModal" class="modal">
         <div class="news-popup">
             <button class="modal-close">&times;</button>
@@ -52,23 +52,41 @@
                 Mulai Jelajahi
             </button>
         </div>
-    </div>
-        
-    <!-- Header/Navigation -->
-    <header id="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html"><img src="assets/icon/icon-jkt-reimagine.png" alt="Logo"></a>
+    </div> -->
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+    
+        <header id="header">
+            <div class="container">
+                <div class="header-content">
+
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/icon/icon-jkt-reimagine.png" alt="Logo">
+                        </a>
+                    </div>
+
+                    <nav id="navMenu">
+                        <a href="about.html">
+                            <button class="nav-btn active">TENTANG</button>
+                        </a>
+
+                        <a href="#submisi">
+                            <button class="nav-btn">SUBMISI</button>
+                        </a>
+
+                        <a href="#juri">
+                            <button class="nav-btn">JURI</button>
+                        </a>
+                    </nav>
+
+                    <button id="menuToggle" class="menu-toggle">
+                        ☰
+                    </button>
+
                 </div>
-                <nav>
-                    <a href="about.html"><button class="nav-btn active" data-tab="about">TENTANG</button></a>
-                    <a href="#submisi"><button class="nav-btn" data-tab="submit">SUBMISI</button></a>
-                    <a href="#juri"><button class="nav-btn" data-tab="jury">JURI</button></a>
-                </nav>
             </div>
-        </div>
-    </header>
+        </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -130,59 +148,58 @@
 
     <!-- Categories Section -->
     <section class="categories" id="submisi">
-    <div class="category-overlay"></div>
-    <div class="container">
-        <h2 class="section-title">
-            CATEGORIES
-        </h2>
-        <div class="category-wrapper">
-            <div class="category-left"></div>
-            <div class="category-right">
+        <div class="container">
+            <h2 class="section-title">
+                CATEGORIES
+            </h2>
+            <div class="category-wrapper">
+                <div class="category-left"></div>
+                <div class="category-right">
 
-                <div class="category-item">
+                    <div class="category-item">
 
-                    <div class="category-title">
-                        <img src="assets/icon/icon-category.png" class="category-icon" alt="">
-                        <h3>MAHASISWA &<br>FRESH GRADUATE</h3>
+                        <div class="category-title">
+                            <img src="assets/icon/icon-category.png" class="category-icon" alt="">
+                            <h3>MAHASISWA &<br>FRESH GRADUATE</h3>
+                        </div>
+
+                        <p>
+                            Memberikan ruang bagi talenta muda dalam menuangkan
+                            gagasan inovatif mengenai pengembangan ruang publik
+                            dan kawasan perkotaan.
+                        </p>
+
+                        <a href="#" class="category-btn">
+                            Submit
+                            <span>→</span>
+                        </a>
+
                     </div>
 
-                    <p>
-                        Memberikan ruang bagi talenta muda dalam menuangkan
-                        gagasan inovatif mengenai pengembangan ruang publik
-                        dan kawasan perkotaan.
-                    </p>
+                    <div class="category-item">
 
-                    <a href="#" class="category-btn">
-                        Submit
-                        <span>→</span>
-                    </a>
+                        <div class="category-title">
+                            <img src="assets/icon/icon-category.png" class="category-icon" alt="">
+                            <h3>PROFESSIONAL</h3>
+                        </div>
 
-                </div>
+                        <p>
+                            Memberikan ruang bagi profesional dalam menghadirkan
+                            solusi yang tidak hanya kreatif, tetapi juga realistis,
+                            aplikatif dan berpotensi.
+                        </p>
 
-                <div class="category-item">
+                        <a href="#" class="category-btn">
+                            Submit
+                            <span>→</span>
+                        </a>
 
-                    <div class="category-title">
-                        <img src="assets/icon/icon-category.png" class="category-icon" alt="">
-                        <h3>PROFESSIONAL</h3>
                     </div>
 
-                    <p>
-                        Memberikan ruang bagi profesional dalam menghadirkan
-                        solusi yang tidak hanya kreatif, tetapi juga realistis,
-                        aplikatif dan berpotensi.
-                    </p>
-
-                    <a href="#" class="category-btn">
-                        Submit
-                        <span>→</span>
-                    </a>
-
                 </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Timeline Section -->
     <!-- <section class="timeline">
@@ -283,9 +300,9 @@
 
         </div>
 
-        <div class="scroll-hint">
+        <!-- <div class="scroll-hint">
             ← Scroll untuk melihat lebih banyak →
-        </div>
+        </div> -->
 
         <div class="timeline-progress">
             <div class="timeline-progress-bar"></div>
@@ -453,64 +470,33 @@
         }
     });
 
-function openPopup(jury){
-    document.getElementById("juryImage").src = jury.photo;
-    document.getElementById("juryName").textContent = jury.name;
-    document.getElementById("juryPosition").textContent = jury.position;
-    typeDescription(jury.description);
-    const list = document.getElementById("juryHistory");
-    list.innerHTML = "";
-    jury.history.forEach((item,index)=>{
-        setTimeout(()=>{
-            list.innerHTML += `<li>${item}</li>`;
-        },index*200);
-    });
-    document.getElementById("juryModal").classList.add("show");
-}
+    function openPopup(jury){
+        document.getElementById("juryImage").src = jury.photo;
+        document.getElementById("juryName").textContent = jury.name;
+        document.getElementById("juryPosition").textContent = jury.position;
+        typeDescription(jury.description);
+        const list = document.getElementById("juryHistory");
+        list.innerHTML = "";
+        jury.history.forEach((item,index)=>{
+            setTimeout(()=>{
+                list.innerHTML += `<li>${item}</li>`;
+            },index*200);
+        });
+        document.getElementById("juryModal").classList.add("show");
+    }
 
     function typeDescription(text){
-    let i = 0;
-    const target = document.getElementById("juryDescription");
-    target.innerHTML = "";
-    function typing(){
-        if(i < text.length){
-            target.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typing,20);
+        let i = 0;
+        const target = document.getElementById("juryDescription");
+        target.innerHTML = "";
+        function typing(){
+            if(i < text.length){
+                target.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing,20);
+            }
         }
-    }
-    typing();
-}
-
-document.querySelectorAll(".modal-close").forEach(btn=>{
-    btn.onclick=()=>{
-        btn.closest(".modal").classList.remove("show");
-    }
-});
-
-document.querySelectorAll(".modal").forEach(modal=>{
-    modal.addEventListener("click",(e)=>{
-        if(e.target===modal){
-            modal.classList.remove("show");
-        }
-    });
-});
-
-document.getElementById("closeNews").onclick=function(){
-
-    document
-    .getElementById("newsModal")
-    .classList.remove("show");
-
-}
-
-    const closeNews=document.getElementById("closeNews");
-    if(closeNews){
-        closeNews.onclick=function(){
-            document
-            .getElementById("newsModal")
-            .classList.remove("show");
-        }
+        typing();
     }
 
 
@@ -613,6 +599,38 @@ document.getElementById("closeNews").onclick=function(){
         progressBar.style.width = (percentage * 100) + "%";
 
     });
+
+    
+    document.querySelectorAll(".modal-close").forEach(btn=>{
+        btn.onclick=()=>{
+            btn.closest(".modal").classList.remove("show");
+        }
+    });
+
+    document.querySelectorAll(".modal").forEach(modal=>{
+        modal.addEventListener("click",(e)=>{
+            if(e.target===modal){
+                modal.classList.remove("show");
+            }
+        });
+    });
+
+    document.getElementById("closeNews").onclick=function(){
+
+        document
+        .getElementById("newsModal")
+        .classList.remove("show");
+
+    }
+
+    const closeNews=document.getElementById("closeNews");
+    if(closeNews){
+        closeNews.onclick=function(){
+            document
+            .getElementById("newsModal")
+            .classList.remove("show");
+        }
+    }
 
     </script>
 </body>
