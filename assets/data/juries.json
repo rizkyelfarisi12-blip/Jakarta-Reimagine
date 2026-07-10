@@ -4,7 +4,7 @@
             "id": 1,
             "name": "John Doe",
             "position": "Urban Designer",
-            "photo": "assets/icon/bg-grey.png",
+            "photo": "assets/gallery/juri/Imagetest.jpeg",
 
             "description": "John Doe adalah Urban Designer yang telah menangani berbagai proyek placemaking di Asia Tenggara.",
 
@@ -16,9 +16,79 @@
         },
         {
             "id": 2,
+            "name": "John Doe",
+            "position": "Urban Designer",
+            "photo": "assets/gallery/juri/Imagetest.jpeg",
+
+            "description": "John Doe adalah Urban Designer yang telah menangani berbagai proyek placemaking di Asia Tenggara.",
+
+            "history": [
+                "CEO Urban Studio",
+                "Professor Universitas Indonesia",
+                "International Design Award 2024"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "John Doe",
+            "position": "Urban Designer",
+            "photo": "assets/gallery/juri/Imagetest.jpeg",
+
+            "description": "John Doe adalah Urban Designer yang telah menangani berbagai proyek placemaking di Asia Tenggara.",
+
+            "history": [
+                "CEO Urban Studio",
+                "Professor Universitas Indonesia",
+                "International Design Award 2024"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "John Doe",
+            "position": "Urban Designer",
+            "photo": "assets/gallery/juri/Imagetest.jpeg",
+
+            "description": "John Doe adalah Urban Designer yang telah menangani berbagai proyek placemaking di Asia Tenggara.",
+
+            "history": [
+                "CEO Urban Studio",
+                "Professor Universitas Indonesia",
+                "International Design Award 2024"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "John Doe",
+            "position": "Urban Designer",
+            "photo": "assets/gallery/juri/Imagetest.jpeg",
+
+            "description": "John Doe adalah Urban Designer yang telah menangani berbagai proyek placemaking di Asia Tenggara.",
+
+            "history": [
+                "CEO Urban Studio",
+                "Professor Universitas Indonesia",
+                "International Design Award 2024"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "John Doe",
+            "position": "Urban Designer",
+            "photo": "assets/gallery/juri/Imagetest.jpeg",
+
+            "description": "John Doe adalah Urban Designer yang telah menangani berbagai proyek placemaking di Asia Tenggara.",
+
+            "history": [
+                "CEO Urban Studio",
+                "Professor Universitas Indonesia",
+                "International Design Award 2024"
+            ]
+        },
+        {
+            "id": 7,
             "name": "Jane Smith",
             "position": "Landscape Architect",
-            "photo": "assets/gallery/bg-sec2-1.jpg",
+            "photo": "assets/gallery/juri/Imagetest.jpeg",
 
             "description": "Landscape Architect dengan pengalaman lebih dari 20 tahun.",
 
@@ -28,5 +98,6 @@
                 "Top 100 Designers Asia"
             ]
         }
+        
     ]
 }

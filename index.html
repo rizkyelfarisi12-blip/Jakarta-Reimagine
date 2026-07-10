@@ -35,6 +35,7 @@
             <button class="modal-close">&times;</button>
         </div>
     </div>
+
 <!-- 
     <div id="newsModal" class="modal">
         <div class="news-popup">
@@ -149,7 +150,7 @@
     <!-- Categories Section -->
     <section class="categories" id="submisi">
         <div class="container">
-            <h2 class="section-title">
+            <h2>
                 CATEGORIES
             </h2>
             <div class="category-wrapper">
@@ -383,9 +384,26 @@
 
     <!-- Jury Section -->
     <section class="jury" id="juri">
-        <div class="jury-grid"></div>
-        <div class="jury-scroll-hint">
-            ← Geser untuk melihat semua juri →
+        <div class="container">
+
+            <h2>
+                JURI
+            </h2>
+            <div class="jury-scroll-wrapper">
+                <button class="jury-arrow left" id="juryPrev">
+                    &#10094;
+                </button>
+                <div class="jury-scroll">
+                    <div class="jury-grid"></div>
+                </div>
+                <button class="jury-arrow right" id="juryNext">
+                    &#10095;
+                </button>
+            </div>
+            <div class="jury-progress">
+                <div class="jury-progress-bar"></div>
+            </div>
+
         </div>
     </section>
     
@@ -499,7 +517,6 @@
         typing();
     }
 
-
     // const observer = new IntersectionObserver((entries)=>{
     //     entries.forEach(entry=>{
     //         if(entry.isIntersecting){
@@ -600,6 +617,46 @@
 
     });
 
+    // juri script scroll
+    const juryScroll = document.querySelector(".jury-scroll");
+    const juryPrev = document.getElementById("juryPrev");
+    const juryNext = document.getElementById("juryNext");
+    const juryProgress = document.querySelector(".jury-progress-bar");
+
+    juryNext.addEventListener("click",()=>{
+
+        juryScroll.scrollBy({
+
+            left:350,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+    juryPrev.addEventListener("click",()=>{
+
+        juryScroll.scrollBy({
+
+            left:-350,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+    juryScroll.addEventListener("scroll",()=>{
+
+        const percentage =
+            juryScroll.scrollLeft /
+            (juryScroll.scrollWidth - juryScroll.clientWidth);
+
+        juryProgress.style.width =
+            (percentage*100)+"%";
+
+    });
     
     document.querySelectorAll(".modal-close").forEach(btn=>{
         btn.onclick=()=>{
