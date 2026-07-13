@@ -1550,14 +1550,31 @@ left:120%;
     display:block;
 }
 .jury-card h3{
-    font-size:18px;
+    margin:0 0 8px;
+    font-size:20px;
     font-weight:700;
-    padding:18px 18px 6px;
+    line-height:1.25;
+}
+.jury-card-content{
+    padding:18px;
+}
+
+.jury-card-title{
+    display:block;
+    margin-bottom:8px;
+
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    color:#111;
 }
 .jury-card p{
+    margin:0;
     font-size:14px;
-    color:#777;
-    padding:0 18px 18px;
+    color:#111;
+    line-height:1.5;
 }
 
 .jury-grid:hover .jury-card{
@@ -1586,7 +1603,7 @@ left:120%;
     font-weight:700;
     letter-spacing:3px;
     text-transform:uppercase;
-    color:#F5A623;
+    color:#111;
 }
 .jury-scroll::-webkit-scrollbar{
     display:none;
@@ -1662,7 +1679,7 @@ left:120%;
 }
 
 .jury-scroll-hint{
-    color:#888;
+    color:#111;
     font-size:14px;
     margin:10px 0 30px;
     animation:hintMove 2s ease-in-out infinite;
@@ -1745,7 +1762,7 @@ left:120%;
     margin:10px 0 24px;
     font-size:18px;
     font-weight:500;
-    color:#777;
+    color:#111;
 }
 .jury-description{
     margin-top:0;
@@ -1774,7 +1791,7 @@ left:120%;
 }
 
 .jury-info h4{
-    color:#777;
+    color:#111;
     margin-bottom:20px;
 }
 

@@ -334,15 +334,15 @@ PARTNER
     transition:.35s;
 }
 
-.partner-item:hover{
+/* .partner-item:hover{
     background:#fff;
     transform:translateY(-8px);
     box-shadow:
     0 20px 40px rgba(0,0,0,.08);
-}
+} */
 
 .partner-item img{
-    height:48px;
+    height:70px;
     width:auto;
     opacity:.75;
     transition:.35s;
