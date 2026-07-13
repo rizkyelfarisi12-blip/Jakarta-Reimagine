@@ -1491,7 +1491,6 @@ left:120%;
 
 
 /* Jury Section */
- 
 .jury{
     padding:120px 7%;
     background:url("../icon/bg-grey.png") center/cover;
@@ -1518,15 +1517,10 @@ left:120%;
 }
 
 .jury-grid{
-
     display:flex;
-
     gap:28px;
-
     width:max-content;
-
     padding:15px 0 25px;
-
 }
 
 .jury-grid::-webkit-scrollbar{
@@ -1575,139 +1569,94 @@ left:120%;
     transform:translateY(-10px) scale(1.05);
 }
 .jury-scroll-wrapper{
-
     position:relative;
-
 }
 .jury-scroll{
-
     overflow-x:auto;
     overflow-y:hidden;
-
     scroll-behavior:smooth;
-
     scrollbar-width:none;
-
     -ms-overflow-style:none;
-
     padding-inline:80px;
-
 }
-
+.jury-title{
+    display:block;
+    margin:0 0 10px;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#F5A623;
+}
 .jury-scroll::-webkit-scrollbar{
-
     display:none;
-
 }
 
 .jury-arrow{
-
     position:absolute;
-
     top:50%;
-
     transform:translateY(-50%);
-
     width:56px;
-
     height:56px;
-
     border:none;
-
     border-radius:50%;
-
     cursor:pointer;
-
     background:rgba(255,255,255,.9);
-
     backdrop-filter:blur(20px);
-
     box-shadow:0 15px 35px rgba(0,0,0,.18);
-
     font-size:24px;
-
     z-index:20;
-
     transition:.3s;
-
 }
 
 .jury-arrow:hover{
-
     background:#F5A623;
-
     color:white;
-
     transform:translateY(-50%) scale(1.08);
-
 }
 
 .jury-arrow.left{
-
     left:-28px;
-
 }
 
 .jury-arrow.right{
-
     right:-28px;
-
 }
 
 .jury-progress{
-
     width:320px;
-
     height:6px;
-
     margin:30px auto 0;
-
     background:#d9d9d9;
-
     border-radius:999px;
-
     overflow:hidden;
-
 }
 
 .jury-progress-bar{
-
     width:0;
-
     height:100%;
-
     background:#F5A623;
-
     transition:.2s;
-
 }
 
 @media(max-width:768px){
 
 .jury-scroll{
-
     padding-inline:20px;
-
 }
 
 .jury-arrow{
-
     width:46px;
     height:46px;
     font-size:18px;
-
 }
 
 .jury-arrow.left{
-
     left:-10px;
-
 }
 
 .jury-arrow.right{
-
     right:-10px;
-
 }
 
 }
@@ -1783,29 +1732,25 @@ left:120%;
 .jury-right{
     display:flex;
     flex-direction:column;
+    /* justify-content:center; */
 }
 
 .jury-right h2{
-    margin-bottom:8px;
-    font-size:40px;
+    margin:0;
+    font-size:42px;
+    line-height:1.1;
 }
 
 .jury-right h4{
-    margin-bottom:25px;
-    color:#888;
+    margin:10px 0 24px;
+    font-size:18px;
+    font-weight:500;
+    color:#777;
 }
 .jury-description{
-    margin-bottom:30px;
+    margin-top:0;
     line-height:1.8;
-}
-.jury-history{
-    flex:1;
-    overflow-y:auto;
-    padding-right:10px;
-}
-.jury-history ul{
-    padding-left:20px;
-    line-height:1.8;
+    text-align:justify;
 }
 
 .modal.show .jury-popup{
@@ -1836,14 +1781,6 @@ left:120%;
 .jury-info p{
     line-height:1.8;
     margin-bottom:20px;
-}
-
-.jury-info ul{
-    padding-left:18px;
-}
-
-.jury-info li{
-    margin-bottom:10px;
 }
 
 @media (max-width:992px){

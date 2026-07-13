@@ -13,29 +13,31 @@
 </head>
 
 <body>
-
     <div id="juryModal" class="modal">
         <div class="jury-popup">
+
             <div class="jury-left">
-                <img id="juryImage">
+                <img id="juryImage" src="" alt="">
             </div>
+
             <div class="jury-right">
 
+                <span id="juryTitle" class="jury-title"></span>
+
                 <h2 id="juryName"></h2>
+
                 <h4 id="juryPosition"></h4>
+
                 <div class="jury-description">
                     <p id="juryDescription"></p>
                 </div>
-                <div class="jury-history">
-                    <h3>Riwayat</h3>
-                    <ul id="juryHistory"></ul>
-                </div>
 
             </div>
+
             <button class="modal-close">&times;</button>
+
         </div>
     </div>
-
 <!-- 
     <div id="newsModal" class="modal">
         <div class="news-popup">
@@ -485,19 +487,19 @@
 
         }
     });
-
+    
     function openPopup(jury){
+
         document.getElementById("juryImage").src = jury.photo;
+
+        document.getElementById("juryTitle").textContent = jury.title;
+
         document.getElementById("juryName").textContent = jury.name;
+
         document.getElementById("juryPosition").textContent = jury.position;
+
         typeDescription(jury.description);
-        const list = document.getElementById("juryHistory");
-        list.innerHTML = "";
-        jury.history.forEach((item,index)=>{
-            setTimeout(()=>{
-                list.innerHTML += `<li>${item}</li>`;
-            },index*200);
-        });
+
         document.getElementById("juryModal").classList.add("show");
     }
 
