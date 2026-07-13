@@ -6,7 +6,7 @@
     <title>Jakarta Reimagined - Placemaking Design Competition</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="http    s://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/css/custom.css">
 
@@ -25,34 +25,34 @@
     }
 
     .submission-container{
-        margin-top:120px;
+        margin-top:140px;
     }
 
     /* =======================
     HEADER
     ======================= */
-    .submission-top{
-        display:flex;
-        justify-content:space-between;
-        align-items:flex-end;
-        gap:80px;
-        margin-bottom:80px;
-    }
 
-    .submission-heading{
-        max-width:700px;
-    }
-
+.submission-top{
+    display:grid;
+    grid-template-columns:minmax(0,760px) 220px;
+    gap:30px;
+    align-items:start;
+}
+.submission-heading{
+    max-width:760px;
+}
     .submission h2{
         font-size:72px;
+        line-height:1;
         margin-bottom:25px;
+        font-family:var(--font-display);
     }
 
     .submission-intro{
-        font-size:22px;
-        line-height:1.8;
-        max-width:650px;
-        text-align: justify;
+        /* font-size:22px; */
+        /* line-height:1.7; */
+        color:#222;
+        text-align:justify;
     }
 
     /* =======================
@@ -60,31 +60,30 @@
     ======================= */
     .submission-action{
         display:flex;
+        flex-direction:column;
         gap:18px;
-        flex-wrap:wrap;
+        width:220px;
+        align-self:start;
     }
 
     /* =======================
     PARAGRAPH
     ======================= */
-    .submission-content{
-        width:100%;
-        display:flex;
-        justify-content:flex-start;
-        margin-top:70px;
-    }
+.submission-content{
+    margin-top:20px;
+}
 
-    .submission-text{
-        max-width:720px;
-    }
+.submission-text{
+    max-width:700px;
+}
 
-    .submission-text p{
-        /* font-size:1px;
-        line-height:0.5; */
-        text-align:justify;
-        color:#333;
-        /* text-indent: 40px; */
-    }
+.submission-text p{
+    /* font-size:17px;
+    line-height:2; */
+    text-align:justify;
+    color:#444;
+    margin-bottom:35px;
+}
 
     /* =======================
     RESPONSIVE
@@ -140,31 +139,33 @@
         margin-bottom:20px;
     }
 
-    .submissi-btn{
-        position:relative;
-        display:inline-flex;
-        align-items:center;
-        gap:12px;
-        padding:2px 34px;
-        border-radius:20px;
-        border:2px solid black;
-        color:black;
-        text-decoration:none;
-        overflow:hidden;
-        animation:floating 3s ease-in-out infinite;
-        transition:
-            transform .35s,
-            border-color .35s,
-            box-shadow .35s;
-    }
+.submissi-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:360px;
+    min-height:72px;
+
+    border:2px solid #111;
+    border-radius:18px;
+
+    text-decoration:none;
+    color:#111;
+
+    font-size:16px;
+    font-weight:600;
+
+    transition:.35s;
+}
 
     .submissi-btn:hover{
         color: white;
         background-color: #111;
     }
 
-    .submissi-btn span{
-        padding-top: 18px;
+    /* .submissi-btn span{
+        padding-top: 5px;
         align-items:center;
         transition:.35s;
         color:black;
@@ -173,7 +174,7 @@
     .submissi-btn:hover span{
         transform:translateX(8px);
         color: white;
-    }
+    } */
     </style>
 </head>
 <body>
@@ -216,7 +217,7 @@
 
                     <h2>SUBMISI</h2>
 
-                    <p class="submission-intro">
+                    <p class="submission-intro" style="font-style: 26px; line-height: 1.5;">
                         Jadilah bagian dari masyarakat kota  dengan memberikan 
                         ide serta gagasan Anda untuk mengubah sudut-sudut kota menjadi 
                         titik temu yang hangat yang mampu memeluk erat siapa saja yang singgah 
@@ -229,13 +230,18 @@
                 <div class="submission-action">
 
                     <a href="#" class="submissi-btn">
-                        Download PDF
-                        <span>→</span>
+                        Download Petunjuk Teknis
+                        <!-- <span>→</span> -->
                     </a>
 
                     <a href="#" class="submissi-btn">
-                        Submit
-                        <span>→</span>
+                        Download .skp
+                        <!-- <span>→</span> -->
+                    </a>
+                    
+                    <a href="#" class="submissi-btn">
+                        <strong>SUBMIT</strong>
+                        <!-- <span>→</span> -->
                     </a>
 
                 </div>
@@ -246,7 +252,7 @@
 
                 <div class="submission-text">
 
-                    <p style="font-size:18px; line-height:1.1;">
+                    <p style="font-size:19px; line-height:1.1;">
                         Placemaking menginspirasi masyarakat untuk secara kolektif membayangkan 
                         kembali dan menciptakan ulang ruang publik sebagai jantung dari setiap komunitas. 
                         Dengan memperkuat hubungan antara masyarakat dan ruang yang mereka gunakan bersama, 
@@ -256,8 +262,8 @@
                         perhatian khusus pada identitas fisik, budaya, dan sosial yang mencirikan 
                         suatu tempat dan mendukung perkembangannya yang berkelanjutan.
                     </p>
-                        <br><br>
-                    <p style="font-size:18px; line-height:1.1;">
+                        <br>
+                    <p style="font-size:19px; line-height:1.1;">
                         Hidupkan Jakarta, lebih dari sekadar kota yang sibuk, 
                         namun juga menyenangkan sebagai kanvas hidup tempat kita menghadirkan 
                         'ruang rasa' di setiap sudutnya. Melalui gagasan dan desain yang Anda ciptakan, 
@@ -287,22 +293,20 @@
                         <div style="width: 2rem; height: 2rem; background-color: white; border-radius: 0.25rem;"></div>
                         <div style="font-weight: bold; font-family: var(--font-display); color: white; line-height: 1.2;">JAKARTA<br>REIMAGINED</div>
                     </div>
-                    <p>Placemaking Design Competition untuk menciptakan ruang publik yang lebih baik.</p>
+                    <p>Jakarta ReImagined: Placemaking Design Competition hadir sebagai ruang yang dirancang untuk mewadahi ide-ide kreatif mengenai pengembangan Jakarta menuju kota global masa depan.</p>
                 </div>
 
                 <!-- Contact -->
-                <div class="footer-section">
-                    <h3>HUBUNGI</h3>
-                    <p>Tentang</p>
-                    <p>Instagram</p>
-                    <p>Telfon</p>
-                </div>
+                <!-- <div class="footer-section">
+                    <a href="https://www.instagram.com/jakartareimagined/"><p>Instagram</p></a>
+                </div> -->
 
                 <!-- Links -->
                 <div class="footer-section">
                     <h3>KONTAK</h3>
-                    <a href="mailto:info@jakartareimagined.com">📧 E-mail</a>
-                    <a href="tel:+62">📞 Telepon</a>
+                    <!-- <a href="mailto:info@jakartareimagined.com"><img src="assets/icon/gmail.png">E-mail</a> -->
+                    <a href="https://wa.me/6282220796887"><img src="assets/icon/phone-call.png">Telepon</a>
+                    <a href="https://www.instagram.com/jakartareimagined/"><img src="assets/icon/instagram.png"><p>Instagram</p></a>
                 </div>
             </div>
 

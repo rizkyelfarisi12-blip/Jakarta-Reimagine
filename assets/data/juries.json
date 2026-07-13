@@ -2,7 +2,7 @@
     "juries": [
         {
             "id": 1,
-            "name": "John Doe",
+            "name": "Farid",
             "position": "Urban Designer",
             "photo": "assets/gallery/juri/Imagetest.jpeg",
 
@@ -16,11 +16,11 @@
         },
         {
             "id": 2,
-            "name": "John Doe",
-            "position": "Urban Designer",
+            "name": "Abimantra Pradana",
+            "position": "Founder of SANA / Sana Kenal Kota",
             "photo": "assets/gallery/juri/Imagetest.jpeg",
 
-            "description": "John Doe adalah Urban Designer yang telah menangani berbagai proyek placemaking di Asia Tenggara.",
+            "description": "Seorang arsitek, urban designer, dosen, dan entrepreneur kreatif asal Jakarta yang cukup dikenal di dunia arsitektur urban dan creative lifestyle Indonesia.",
 
             "history": [
                 "CEO Urban Studio",
@@ -30,7 +30,7 @@
         },
         {
             "id": 3,
-            "name": "John Doe",
+            "name": "Diky Soemarno",
             "position": "Urban Designer",
             "photo": "assets/gallery/juri/Imagetest.jpeg",
 

@@ -475,7 +475,6 @@ footer {
     text-decoration: none;
     font-size: 0.875rem;
     display: flex;
-    align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
     transition: color 0.3s ease;
@@ -483,6 +482,11 @@ footer {
 
 .footer-section a:hover {
     color: white;
+}
+.footer-section img{
+    width: 15px;
+    height: 15px;
+    align-items: center;
 }
 
 .footer-bottom {
