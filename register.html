@@ -12,7 +12,7 @@
 
     <style>
             
-    .categories{
+    .submission{
         position:relative;
         min-height:100vh;
         padding: 90px 0;
@@ -25,11 +25,11 @@
     }
 
     @media (min-width: 768px) {
-        .categories {
+        .submission {
             padding: 6rem 0;
         }
     }
-    .categories h2 {
+    .submission h2 {
         font-size: 1.875rem;
         font-weight: bold;
         color: var(--dark-gray);
@@ -38,30 +38,30 @@
     }
 
     @media (min-width: 768px) {
-        .categories h2 {
+        .submission h2 {
             font-size: 2.25rem;
         }
     }
-    .categories .container{
+    .submission .container{
         position:relative;
         z-index:2;
     }
 
-    .category-wrapper{
+    .submissi-wrapper{
         display:flex;
         justify-content:flex-end;
         align-items:flex-start;
         min-height:600px;
     }
 
-    .category-right{
+    .submissi-right{
         width:55%;
         display:grid;
         grid-template-columns:1fr 1fr;
         gap:60px;
     }
 
-    .category-item{
+    .submissi-item{
 
         display:flex;
         flex-direction:column;
@@ -75,34 +75,34 @@
 
     }
 
-    .category-title{
+    .submissi-title{
         display:flex;
         align-items:flex-start;
         gap:18px;
         margin-bottom:20px;
     }
 
-    .category-title h3{
+    .submissi-title h3{
         margin:0;
         min-height:auto;
         line-height:1.3;
     }
 
-    .category-item p{
+    .submissi-item p{
         flex:1;
         line-height:1.8;
         margin-top:15px;
         margin-bottom:30px;
     }
 
-    .category-item span{
+    .submissi-item span{
         color:#F5A623;
         font-weight:600;
         display:block;
         margin-bottom:20px;
     }
 
-    .category-btn{
+    .submissi-btn{
         position:relative;
         display:inline-flex;
         align-items:center;
@@ -120,39 +120,38 @@
             box-shadow .35s;
     }
 
-    .category-btn:hover{
+    .submissi-btn:hover{
         color: white;
         background-color: #111;
     }
 
-    .category-btn span{
+    .submissi-btn span{
         padding-top: 18px;
         align-items:center;
         transition:.35s;
         color:black;
     }
 
-    .category-btn:hover span{
+    .submissi-btn:hover span{
         transform:translateX(8px);
         color: white;
     }
 
-    .category-item.show{
+    .submissi-item.show{
         opacity:1;
         transform:translateY(0);
     }
 
     @media(max-width:992px){
-        .category-wrapper{
+        .submissi-wrapper{
             justify-content:center;
         }
-        .category-right{
+        .submissi-right{
             width:100%;
             grid-template-columns:1fr;
             gap:50px;
         }
     }
-
 
     </style>
 </head>
@@ -169,7 +168,7 @@
                     </div>
                     <nav id="navMenu">
                         <a href="about.html">
-                            <button class="nav-btn active">TENTANG</button>
+                            <button class="nav-btn">TENTANG</button>
                         </a>
                         <a href="register.html">
                             <button class="nav-btn">SUBMISI</button>
@@ -184,22 +183,21 @@
                 </div>
             </div>
         </header>
-
         
-    <!-- Categories Section -->
-    <section class="categories" id="submisi" >
+    <!-- submission Section -->
+    <section class="submission" id="submisi" >
         <div class="container" style="margin-top: 100px;">
             <h2>
                 SUBMISI
             </h2>
-            <div class="category-wrapper">
-                <div class="category-left"></div>
-                <div class="category-right">
+            <div class="submissi-wrapper">
+                <div class="submissi-left"></div>
+                <div class="submissi-right">
 
-                    <div class="category-item">
+                    <div class="submissi-item">
 
-                        <!-- <div class="category-title">
-                            <img src="assets/icon/icon-category.png" class="category-icon" alt="">
+                        <!-- <div class="submissi-title">
+                            <img src="assets/icon/icon-submissi.png" class="submissi-icon" alt="">
                             <h3>DAFTAR DISINI</h3>
                         </div> -->
 
@@ -210,17 +208,17 @@
                         </p>
                         
 
-                        <!-- <a href="#" class="category-btn">
+                        <!-- <a href="#" class="submissi-btn">
                             Submit
                             <span>→</span>
                         </a> -->
 
                     </div>
 
-                    <div class="category-item" >
+                    <div class="submissi-item" >
 
-                        <!-- <div class="category-title">
-                            <img src="assets/icon/icon-category.png" class="category-icon" alt="">
+                        <!-- <div class="submissi-title">
+                            <img src="assets/icon/icon-submissi.png" class="submissi-icon" alt="">
                             <h3>PROFESSIONAL</h3>
                         </div> -->
 
@@ -230,7 +228,7 @@
                             aplikatif dan berpotensi.
                         </p>
 
-                        <a href="#" class="category-btn">
+                        <a href="#" class="submissi-btn">
                             Submit
                             <span>→</span>
                         </a>
@@ -242,7 +240,6 @@
         </div>
     </section>
 
-    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -283,9 +280,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-
-
-
 </body>
 
 </html>
