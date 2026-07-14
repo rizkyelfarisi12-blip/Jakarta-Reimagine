@@ -14,77 +14,76 @@
 
     <style>
             
-    .submission{
-        position:relative;
-        min-height:100vh;
-        padding: 90px 0;
-        display:flex;
-        align-items:center;
-        background:url("assets/icon/backgroundRegis.png");
-        background-size:cover;
-        background-position:center;
-        overflow:hidden;
-    }
+.submission{
+    position:relative;
+    min-height:100vh;
+    padding:120px 0 80px;
+    display:flex;
+    align-items:center;
+    background:url("assets/icon/backgroundRegis.png") center/cover;
+    overflow:hidden;
+}
 
-    .submission-container{
-        margin-top:140px;
-    }
+.submission-container{
+    margin-top:100px;
+}
 
-    /* =======================
-    HEADER
-    ======================= */
+/* =======================
+HEADER
+======================= */
 
 .submission-top{
     display:grid;
-    grid-template-columns:minmax(0,760px) 220px;
-    gap:30px;
+    grid-template-columns:minmax(0,1fr) 360px;
+    gap:50px;
     align-items:start;
+}
+
+
+.submission-intro{
+    font-size:22px;
+    line-height:1.8;
+    text-align:justify;
+    color:#222;
 }
 .submission-heading{
     max-width:760px;
 }
-    .submission h2{
-        font-size:72px;
-        line-height:1;
-        margin-bottom:25px;
-        font-family:var(--font-display);
-    }
 
-    .submission-intro{
-        /* font-size:22px; */
-        /* line-height:1.7; */
-        color:#222;
-        text-align:justify;
-    }
+/* =======================
+BUTTON
+======================= */
+.submission-action{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    width:100%;
+}
 
-    /* =======================
-    BUTTON
-    ======================= */
-    .submission-action{
-        display:flex;
-        flex-direction:column;
-        gap:18px;
-        width:220px;
-        align-self:start;
-    }
-
-    /* =======================
-    PARAGRAPH
-    ======================= */
+/* =======================
+PARAGRAPH
+======================= */
 .submission-content{
-    margin-top:20px;
+    margin-top:40px;
 }
 
 .submission-text{
-    max-width:700px;
+    max-width:760px;
+}
+
+.submission h2{
+    font-size:72px;
+    line-height:1;
+    margin-bottom:25px;
+    font-family:var(--font-display);
 }
 
 .submission-text p{
-    /* font-size:17px;
-    line-height:2; */
+    font-size:17px;
+    line-height:1.9;
     text-align:justify;
     color:#444;
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
     /* =======================
@@ -118,12 +117,6 @@
         font-family:var(--font-display);
     }
 
-    .submission p{
-        max-width:620px;
-        font-size:19px;
-        line-height:1.9;
-    }
-
     @media (min-width: 768px) {
         .submission h2 {
             font-size: 2.25rem;
@@ -143,11 +136,11 @@
 
 .submissi-btn{
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
-    width:360px;
-    min-height:72px;
+    width:100%;
+    height:72px;
 
     border:2px solid #111;
     border-radius:18px;
@@ -158,7 +151,7 @@
     font-size:16px;
     font-weight:600;
 
-    transition:.35s;
+    transition:.3s;
 }
 
     .submissi-btn:hover{
@@ -177,6 +170,93 @@
         transform:translateX(8px);
         color: white;
     } */
+
+    @media (max-width:992px){
+
+.submission{
+    padding:100px 0 70px;
+}
+
+.submission-top{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.submission-action{
+    width:320px;
+}
+
+.submission h2{
+    font-size:56px;
+}
+
+.submission-intro{
+    font-size:20px;
+}
+
+.submission-text{
+    max-width:100%;
+}
+
+}
+@media (max-width:768px){
+
+.submission{
+    padding:80px 0 60px;
+}
+
+.submission-container{
+    margin-top:70px;
+}
+
+.submission h2{
+    font-size:42px;
+}
+
+.submission-intro{
+    font-size:17px;
+    line-height:1.7;
+}
+
+.submission-action{
+    width:100%;
+}
+
+.submissi-btn{
+    width:100%;
+    height:60px;
+    font-size:15px;
+}
+
+.submission-text p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+}
+
+
+@media (max-width:480px){
+
+.submission h2{
+    font-size:34px;
+}
+
+.submission-intro{
+    font-size:16px;
+}
+
+.submissi-btn{
+    height:56px;
+    font-size:14px;
+}
+
+.submission-text p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+}
     </style>
 </head>
 <body>
