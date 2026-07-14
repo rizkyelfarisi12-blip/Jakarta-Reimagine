@@ -112,6 +112,18 @@ header.scrolled .logo img{
     line-height: 1.2;
 } */
 
+@media (max-width:768px){
+
+    .logo img{
+        height:60px;
+    }
+
+    header.scrolled .logo img{
+        height:50px;
+    }
+
+}
+
 nav {
     display: none;
     gap: 2rem;
