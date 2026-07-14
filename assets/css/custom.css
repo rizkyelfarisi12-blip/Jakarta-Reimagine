@@ -421,24 +421,28 @@ nav button:active{
     opacity:0;
     transform:translateY(40px);
     animation:fadeUp 1s .3s forwards;
-
 }
 
-@media(max-width:768px){
-.hero-text h1{
-    font-size:42px;
-    }
-}
+
 .hero-text p{
     color:#111;
     font-size:20px;
-    max-width:620px;
+    max-width:580px;
     margin-bottom:40px;
     line-height: 1.05;
 
     opacity:0;
     transform:translateY(40px);
     animation:fadeUp 1s .8s forwards;
+}
+
+@media(max-width:768px){
+.hero-text h1{
+    font-size:42px;
+    }
+    .hero-text p{
+        max-width: 300px;
+    }
 }
 
 .hero-btn{
@@ -1073,7 +1077,8 @@ to{
 } */
 
 .category-btn span{
-    padding-top: 18px;
+    padding-top:18px;
+    display:flex;
     align-items:center;
     transition:.35s;
     color:black;
@@ -1088,10 +1093,6 @@ to{
     opacity:1;
     transform:translateY(0);
 }
-
-/* ==========================
-   TABLET
-========================== */
 
 @media (max-width:992px){
 
@@ -1117,10 +1118,6 @@ to{
     }
 
 }
-
-/* ==========================
-   MOBILE
-========================== */
 
 @media (max-width:768px){
 
@@ -1177,9 +1174,9 @@ to{
         font-size:16px;
     }
 
-    .category-btn span{
-        padding-top:0;
-    }
+    /* .category-btn span{
+        padding-top:;
+    } */
 
 }
 
