@@ -358,7 +358,7 @@ nav button:active{
     content:"";
     position:absolute;
     inset:0;
-    background-image:url("../icon/bg-grey-building.png");
+    background-image:url("../icon/Asset-Landing-Page-Web.jpg");
     background-size:cover;
     background-position:center;
     transform:scale(1);
@@ -369,7 +369,7 @@ nav button:active{
 @media (max-width:768px){
 
     .hero::before{
-        background-position:left center;
+        background-image:url("../icon/Asset-Landing-Page-Mobile.jpg");
     }
 
 }
