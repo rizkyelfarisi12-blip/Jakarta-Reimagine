@@ -418,7 +418,7 @@ TIMELINE
     backdrop-filter:blur(15px);
     border-radius:18px;
     padding:25px;
-    width:100%;
+    width:50%;
     transition:.35s;
 }
 
