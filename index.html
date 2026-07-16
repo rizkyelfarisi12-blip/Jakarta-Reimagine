@@ -60,39 +60,10 @@
     </div> -->
 
     <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- navbar -->
+    <div id="navbar"></div>
     
-        <header id="header">
-            <div class="container">
-                <div class="header-content">
-
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="assets/icon/icon-jkt-reimagine.png" alt="Logo">
-                        </a>
-                    </div>
-
-                    <nav id="navMenu">
-                        <a href="about.html">
-                            <button class="nav-btn">ABOUT</button>
-                        </a>
-
-                        <a href="register.html">
-                            <button class="nav-btn">SUBMISSION</button>
-                        </a>
-
-                        <a href="#juri">
-                            <button class="nav-btn">JUDGES</button>
-                        </a>
-                    </nav>
-
-                    <button id="menuToggle" class="menu-toggle">
-                        ☰
-                    </button>
-
-                </div>
-            </div>
-        </header>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -292,43 +263,11 @@
         </div>
     </section>    
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- Brand -->
-                <div class="footer-section">
-                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                        <div><img src="assets/icon/LogoJakartaReimaginedWhite.png" style="min-height: 70px; min-width: 289px;"></div>
-                    </div>
-                    <p>Jakarta ReImagined: Placemaking Design Competition hadir sebagai ruang yang dirancang untuk mewadahi ide-ide kreatif mengenai pengembangan Jakarta menuju kota global masa depan.</p>
-                </div>
-
-                <!-- Contact -->
-                <!-- <div class="footer-section">
-                    <a href="https://www.instagram.com/jakartareimagined/"><p>Instagram</p></a>
-                </div> -->
-
-                <!-- Links -->
-                <div class="footer-section">
-                    <h3>KONTAK</h3>
-                    <!-- <a href="mailto:info@jakartareimagined.com"><img src="assets/icon/gmail.png">E-mail</a> -->
-                    <a href="https://wa.me/6282220796887"><img src="assets/icon/phone-call.png">Telepon</a>
-                    <a href="https://www.instagram.com/jakartareimagined/"><img src="assets/icon/instagram.png"><p>Instagram</p></a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Jakarta Reimagined. All rights reserved.</p>
-                <div class="footer-links">
-                    <!-- <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a> -->
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- footers -->
+    <div id="footer"></div>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/include.js"></script>
 
     <script>
     fetch("assets/data/juries.json")
@@ -338,9 +277,7 @@
         data.juries.forEach(jury => {
             container.innerHTML += `
                 <div class="jury-card" data-id="${jury.id}">
-
                     <img src="${jury.photo}" alt="${jury.name}">
-
                     <div class="jury-card-content">
 
                         <span class="jury-card-title">
@@ -348,13 +285,11 @@
                         </span>
 
                         <h3>${jury.name}</h3>
-
                         <p>${jury.position}</p>
 
                     </div>
-
                 </div>
-                `;
+            `;
         });
     });
 
@@ -477,25 +412,20 @@
     const btnNext = document.getElementById("timelineNext");
 
     btnNext.addEventListener("click", () => {
-
         timelineScroll.scrollBy({
-
             left: 380,
             behavior: "smooth"
 
         });
-
     });
 
     btnPrev.addEventListener("click", () => {
-
         timelineScroll.scrollBy({
 
             left: -380,
             behavior: "smooth"
 
         });
-
     });
 
     const progressBar = document.querySelector(".timeline-progress-bar");
@@ -517,38 +447,26 @@
     const juryProgress = document.querySelector(".jury-progress-bar");
 
     juryNext.addEventListener("click",()=>{
-
         juryScroll.scrollBy({
-
             left:350,
-
             behavior:"smooth"
-
         });
-
     });
 
     juryPrev.addEventListener("click",()=>{
-
         juryScroll.scrollBy({
-
             left:-350,
-
             behavior:"smooth"
-
         });
-
     });
 
     juryScroll.addEventListener("scroll",()=>{
-
         const percentage =
             juryScroll.scrollLeft /
             (juryScroll.scrollWidth - juryScroll.clientWidth);
 
         juryProgress.style.width =
             (percentage*100)+"%";
-
     });
     
     document.querySelectorAll(".modal-close").forEach(btn=>{

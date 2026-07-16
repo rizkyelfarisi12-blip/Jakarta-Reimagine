@@ -1,71 +1,67 @@
-// Navbar scroll effect
-const header = document.getElementById("header");
+function initMain(){
 
-window.addEventListener("scroll", () => {
+    // Navbar scroll effect
+    const header = document.getElementById("header");
 
-    if(window.scrollY > 80){
+    window.addEventListener("scroll", () => {
 
-        header.classList.add("scrolled");
-
-    }else{
-
-        header.classList.remove("scrolled");
-
-    }
-
-});
-
-const navButtons = document.querySelectorAll(".nav-btn");
-
-navButtons.forEach(button=>{
-
-    button.addEventListener("click",()=>{
-
-        navButtons.forEach(btn=>btn.classList.remove("active"));
-
-        button.classList.add("active");
+        if(window.scrollY > 80){
+            header.classList.add("scrolled");
+        }else{
+            header.classList.remove("scrolled");
+        }
 
     });
 
-});
+    const navButtons = document.querySelectorAll(".nav-btn");
 
-const menuToggle=document.getElementById("menuToggle");
-const navMenu=document.getElementById("navMenu");
-const menuOverlay=document.getElementById("menuOverlay");
+    navButtons.forEach(button=>{
 
-menuToggle.onclick=()=>{
+        button.addEventListener("click",()=>{
 
-    navMenu.classList.toggle("active");
+            navButtons.forEach(btn=>btn.classList.remove("active"));
 
-    menuOverlay.classList.toggle("active");
+            button.classList.add("active");
 
-    menuToggle.innerHTML=
-        navMenu.classList.contains("active")
-        ?"✕"
-        :"☰";
+        });
 
-};
+    });
 
-menuOverlay.onclick=()=>{
+    const menuToggle=document.getElementById("menuToggle");
+    const navMenu=document.getElementById("navMenu");
+    const menuOverlay=document.getElementById("menuOverlay");
 
-    navMenu.classList.remove("active");
+    menuToggle.onclick=()=>{
 
-    menuOverlay.classList.remove("active");
+        navMenu.classList.toggle("active");
 
-    menuToggle.innerHTML="☰";
+        menuOverlay.classList.toggle("active");
 
-};
+        menuToggle.innerHTML=
+            navMenu.classList.contains("active")
+            ?"✕"
+            :"☰";
 
-document.querySelectorAll("#navMenu a").forEach(link=>{
+    };
 
-    link.onclick=()=>{
+    menuOverlay.onclick=()=>{
 
         navMenu.classList.remove("active");
-
         menuOverlay.classList.remove("active");
-
         menuToggle.innerHTML="☰";
 
     };
 
-});
+    document.querySelectorAll("#navMenu a").forEach(link=>{
+
+        link.onclick=()=>{
+
+            navMenu.classList.remove("active");
+            menuOverlay.classList.remove("active");
+            menuToggle.innerHTML="☰";
+
+        };
+
+    });
+
+}
