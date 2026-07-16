@@ -44,8 +44,24 @@
                 </div>
 
                 <div class="about-right">
-                    <div class="about-image">
-                        <img id="aboutSlider" src="assets/gallery/bg-sec2-1.jpg" alt="About">
+                    <div class="about-image-slider">
+
+                        <div class="about-slide active"
+                            style="background-image:url('assets/gallery/bg-sec2-1.jpg');">
+                        </div>
+
+                        <div class="about-slide"
+                            style="background-image:url('assets/gallery/bg-sec2-2.jpg');">
+                        </div>
+
+                        <div class="about-slide"
+                            style="background-image:url('assets/gallery/bg-sec2-3.jpg');">
+                        </div>
+
+                        <div class="about-slide"
+                            style="background-image:url('assets/gallery/bg-sec2-4.jpg');">
+                        </div>
+
                     </div>
                 </div>
 
@@ -165,31 +181,23 @@
     <script src="assets/js/include.js"></script>
 
     <script>
-        const aboutImages = [
-            "assets/gallery/bg-sec2-1.jpg",
-            "assets/gallery/bg-sec2-2.jpg",
-            "assets/gallery/bg-sec2-3.jpg",
-            "assets/gallery/bg-sec2-4.jpg"
-        ];
+        const aboutSlides = document.querySelectorAll(".about-slide");
 
-        const aboutSlider = document.getElementById("aboutSlider");
+        let currentAbout = 0;
 
-        let currentImage = 0;
         setInterval(() => {
-            aboutSlider.classList.add("fade-out");
-            setTimeout(() => {
 
-                currentImage++;
+            aboutSlides[currentAbout].classList.remove("active");
 
-                if(currentImage >= aboutImages.length){
-                    currentImage = 0;
-                }
+            currentAbout++;
 
-                aboutSlider.src = aboutImages[currentImage];
-                aboutSlider.classList.remove("fade-out");
+            if(currentAbout >= aboutSlides.length){
+                currentAbout = 0;
+            }
 
-            },800);
-        },4000);
+            aboutSlides[currentAbout].classList.add("active");
+
+        },5000);
     </script>
 
 </body>
