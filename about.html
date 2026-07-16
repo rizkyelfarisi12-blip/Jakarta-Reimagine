@@ -16,23 +16,6 @@
     <!-- navbar -->
     <div id="navbar"></div>
 
-    
-<!-- <header class="header">
-    <div class="container">
-
-        <a href="index.html" class="logo">
-            <img src="assets/icon/icon-jkt-reimagine.png" alt="Logo">
-        </a>
-
-        <nav>
-            <a href="#about">About</a>
-            <a href="#partners">Partners</a>
-            <a href="#timeline">Timeline</a>
-        </nav>
-
-    </div>
-</header> -->
-
     <!-- ABOUT -->
     <section class="about-section" id="about">
         <div class="container">
@@ -62,7 +45,7 @@
 
                 <div class="about-right">
                     <div class="about-image">
-                        <img src="assets/icon/Foto-about.jpg" alt="">
+                        <img id="aboutSlider" src="assets/gallery/bg-sec2-1.jpg" alt="About">
                     </div>
                 </div>
 
@@ -180,6 +163,34 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/include.js"></script>
+
+    <script>
+        const aboutImages = [
+            "assets/gallery/bg-sec2-1.jpg",
+            "assets/gallery/bg-sec2-2.jpg",
+            "assets/gallery/bg-sec2-3.jpg",
+            "assets/gallery/bg-sec2-4.jpg"
+        ];
+
+        const aboutSlider = document.getElementById("aboutSlider");
+
+        let currentImage = 0;
+        setInterval(() => {
+            aboutSlider.classList.add("fade-out");
+            setTimeout(() => {
+
+                currentImage++;
+
+                if(currentImage >= aboutImages.length){
+                    currentImage = 0;
+                }
+
+                aboutSlider.src = aboutImages[currentImage];
+                aboutSlider.classList.remove("fade-out");
+
+            },800);
+        },4000);
+    </script>
 
 </body>
 </html>
