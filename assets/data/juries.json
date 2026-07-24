@@ -6,16 +6,25 @@
             "name":"Jacob Gatot Sura",
             "position":"Komisaris M Bloc Space",
             "photo":"assets/gallery/juri/Jacob.jpeg",
-            "description":"Salah satu figur kreatif di balik lahirnya ruang-ruang urban kreatif di Jakarta seperti M Bloc Space dan Pos Bloc."
+            "description":[
+                "Memperkenalkan Jacob Gatot Sura, Arsitek dan Co-Founder M Bloc Space sekaligus dewan juri Jakarta ReImagined: Placemaking Design Competition. Sebagai salah satu figur kreatif di balik lahirnya ruang-ruang urban seperti M Bloc Space dan Pos Bloc, Jacob telah menunjukkan bagaimana ruang yang sebelumnya kurang dimanfaatkan dapat bertransformasi menjadi ruang publik yang hidup, inklusif, dan memiliki nilai bagi masyarakat.",
+                "Melalui pendekatan placemaking, ia percaya bahwa sebuah ruang tidak hanya dirancang untuk memenuhi fungsi, tetapi juga untuk membangun interaksi, memperkuat identitas kawasan, dan menciptakan pengalaman yang bermakna bagi penggunanya.",
+                "Berbekal pengalaman tersebut, Jacob akan menghadirkan perspektifnya dalam menilai gagasan-gagasan terbaik pada kategori Placemaking / Urban Design mencari ide yang mampu menjawab kebutuhan kota sekaligus menghadirkan ruang publik yang lebih hidup dan berdaya guna."
+                ]
         },
         {
             "id": 2,
             "title":"DEWAN JURI",
-            "name": "Abimantra Pradhana",
-            "position": "Arsitek dan Founder SANA Kenal Kota",
+            "name": "Abimantra Pradana",
+            "position": "Arsitek dan Perancang Kota Inisiator SANA Kenal Kota",
             "photo": "assets/gallery/juri/Abimantra.jpeg",
 
-            "description": "Seorang arsitek, urban designer, dosen, dan entrepreneur kreatif asal Jakarta yang cukup dikenal di dunia arsitektur urban dan creative lifestyle Indonesia."
+            "description":[
+                 "Memperkenalkan Abimantra Pradhana, seorang arsitek, urban designer, dosen, dan entrepreneur kreatif asal Jakarta, sekaligus inisiator SANA Kenal Kota. Ia merupakan dewan juri Jakarta ReImagined: Placemaking Design Competition.",
+                 "Dikenal dalam dunia arsitektur urban dan creative lifestyle Indonesia, Abimantra memiliki perhatian khusus terhadap bagaimana ruang dapat membentuk pengalaman, karakter, dan daya tarik sebuah kawasan.",
+                 "Melalui berbagai karyanya serta upayanya dalam mengedukasi publik mengenai arsitektur dan kota, ia menunjukkan bahwa sebuah ruang dapat berperan lebih dari sekadar bangunan tetapi menjadi bagian dari cerita, aktivitas, dan kehidupan masyarakat di sekitarnya.",
+                 "Dengan perspektifnya dalam melihat hubungan antara ruang, manusia, dan kota, Abimantra akan memberikan pandangan dalam menilai gagasan terbaik untuk menciptakan destinasi yang lebih bermakna bagi Jakarta."
+            ]
         },
         {
             "id": 3,
@@ -24,7 +33,12 @@
             "position": "Staf Khusus Gubernur Jakarta Ketua Bidang Pemuda dan Olahraga",
             "photo": "assets/gallery/juri/Diky-Soemarno.jpeg",
 
-            "description": "Diky Budi Ramadhan resmi ditunjuk sebagai Staf Khusus (Stafsus) Gubernur Bidang Pemuda dan Olahraga. Sosok yang dikenal luas sebagai Ketua Umum organisasi suporter The Jakmania ini diangkat oleh Gubernur Jakarta, Pramono Anung, untuk membantu mengelola kebijakan dan program kepemudaan serta keolahragaan di wilayah ibu kota."
+            "description": [
+                "Memperkenalkan Diky Soemarno, Staf Khusus Gubernur Jakarta Bidang Pemuda dan Olahraga, sekaligus dewan juri Jakarta ReImagined: Placemaking Design Competition.",
+                "Dengan pengalaman dalam bidang sports marketing, manajemen komunitas, dan pengembangan organisasi, Diky dikenal sebagai sosok yang aktif dalam membangun keterlibatan masyarakat serta memberdayakan komunitas, khususnya generasi muda.",
+                "Melalui pengalamannya dalam mengelola strategi, komunikasi, dan pengembangan ekosistem komunitas, ia memiliki perspektif dalam melihat bagaimana sebuah ide dapat berkembang menjadi gerakan yang memberikan dampak nyata.",
+                "Sebagai dewan juri, Diky akan memberikan pandangannya dalam menilai gagasan inovatif yang mampu menciptakan nilai ekonomi, memperkuat komunitas, dan menghadirkan peluang baru bagi perkembangan kota Jakarta."
+            ]
         },
         {
             "id": 4,
@@ -33,16 +47,21 @@
             "position": "Staf Khusus Gubernur Bidang Tata Kota",
             "photo": "assets/gallery/juri/Nirwono.jpeg",
 
-            "description": "Ir. Nirwono Joga, MLA adalah seorang pakar tata kota, arsitek lanskap, dan pengamat perkotaan terkemuka di Indonesia. Beliau menjabat sebagai Direktur Eksekutif Pusat Studi Perkotaan (Center for Urban Studies) dan aktif sebagai Staf Khusus Penjabat Gubernur Jakarta bidang Penataan Kota dan Bangunan."
+            "description": [
+                "Ir. Nirwono Joga, MLA adalah seorang pakar tata kota, arsitek lanskap, dan pengamat perkotaan terkemuka di Indonesia. Beliau menjabat sebagai Direktur Eksekutif Pusat Studi Perkotaan (Center for Urban Studies) dan aktif sebagai Staf Khusus Penjabat Gubernur Jakarta bidang Penataan Kota dan Bangunan."
+            ]
         },
         {
             "id": 5,
             "title":"JURI ANGGOTA",
             "name": "Widiyani, S.T., M.T., Ph.D.",
-            "position": "Asisten Profesor Program Arsitektur Institut Teknologi Bandung (ITB)",
+            "position": "Assistant Professor in Department of Architecture School of Architecture, Planning and Policy Development, Institute of Technology Bandung (ITB)",
             "photo": "assets/gallery/juri/Widiya.jpeg",
 
-            "description": "Akademisi dan Associate Professor di Institut Teknologi Bandung (ITB), Indonesia. Beliau mengajar di bawah naungan Kelompok Keahlian Sejarah, Teori, dan Kritik Arsitektur pada Sekolah Arsitektur, Perencanaan, dan Pengembangan Kebijakan (SAPPK ITB) "
+            "description":[
+                 "Ketua Arte-Polis tahun 2020 - 2024, sebuah konferensi internasional yang menjembatani diskusi teoretis tentang placemaking (penciptaan tempat) dengan kebutuhan nyata masyarakat. Penelitiannya secara khusus mengkaji bagaimana fasilitas dan fungsi membentuk konteks suatu tempat melalui proses aktivasi, sehingga memengaruhi perilaku manusia dan interaksi sosial.",
+                 "Sejak tahun 2021 ia mengajar mata kuliah Placemaking di ITB, serta meluncurkan Placemaking Indonesia pada tahun 2024. Pada tahun 2025, ia menerima Australia Awards Fellowship untuk mengembangkan lebih lanjut berbagai inisiatif Walkable Placemaking (placemaking yang mendukung lingkungan yang nyaman dan mudah dilalui dengan berjalan kaki)."
+            ]
         },
         {
             "id": 6,
@@ -51,7 +70,9 @@
             "position": "Owner PT. Rumah SDM dan Anggota Bidang OKK GEKRAFS",
             "photo": "assets/gallery/juri/Nuruddin.jpeg",
 
-            "description": "Profesional di bidang Sumber Daya Manusia dengan memiliki Perusahaan PT. Rumah SDM Indonesia yang bergerak pada bidang Human Capital Partner, dan aktif dalam organisasi yang memiliki peran strategis dalam pengembangan kepemimpinan, kewirausahaan pemuda, dan ekonomi kreatif indonesia. Sebagai Tim Bidang Organisasi Kaderisasi Keanggotaan pada DPP GEKRAFS (Gerakan Ekonomi Kreatif Nasional)."
+            "description": [
+                "Profesional di bidang Sumber Daya Manusia dengan memiliki Perusahaan PT. Rumah SDM Indonesia yang bergerak pada bidang Human Capital Partner, dan aktif dalam organisasi yang memiliki peran strategis dalam pengembangan kepemimpinan, kewirausahaan pemuda, dan ekonomi kreatif indonesia. Sebagai Tim Bidang Organisasi Kaderisasi Keanggotaan pada DPP GEKRAFS (Gerakan Ekonomi Kreatif Nasional)."
+            ]
         }
         
     ]

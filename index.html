@@ -360,14 +360,17 @@
     function openPopup(jury){
 
         document.getElementById("juryImage").src = jury.photo;
-
         document.getElementById("juryTitle").textContent = jury.title;
-
         document.getElementById("juryName").textContent = jury.name;
-
         document.getElementById("juryPosition").textContent = jury.position;
 
-        typeDescription(jury.description);
+        const target = document.getElementById("juryDescription");
+
+        target.innerHTML = "";
+
+        jury.description.forEach(text => {
+            target.innerHTML += `<p>${text}</p>`;
+        });
 
         document.getElementById("juryModal").classList.add("show");
     }
